@@ -12,4 +12,9 @@ claude /config
 cd ~/.claude && git pull
 ```
 
+todo:
+- add domain knowledge rule, eg., use viser,wandb,urdf2mjcf, Handle coordinate system conversions with care...
+- add python coding style
+- add tool use preference: ipdb, 
+- add happy for notification
 
