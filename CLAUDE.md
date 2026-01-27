@@ -106,6 +106,15 @@ for environment export, Use 'conda env export -- froth-history' to export top-le
 
 **For complex development, it should be split into relatively independent phases, and testing and verification methods should be defined for each phase. Execute the plan step by step, and enter the next phase only after the test passes.**
 
+**for any changes: tell me the file path you modify or create, tell me which function you change for code**
+
+## modern python coding preference
+- using `Type Hints`
+- using `@dataclass` decorator
+- using `Hydra`,`pathlib` manger path and config
+- using `async/await` to asynchronous programming
+
+
 ## project structure and data organize
 - for large datasets, using jsonl rather than json
 - a good project may include `src, utils, scripts, test, thirdparty` dir
@@ -124,7 +133,7 @@ for environment export, Use 'conda env export -- froth-history' to export top-le
 ## modern python coding style
 **coding style:Use modern Python programming style to write maintainable, abstract, and highly encapsulated code, using type annotations, Hydra decorators, and other excellent features**
 - using `type hints`
-- using `f-string` 
+- using `f-string`
 - using `ipdb` for breakpoint when encouter a triky bug
 - using `hydra`+`yaml`+`pathlib` to manager config and path
 - using `@dataclass`
@@ -135,8 +144,5 @@ for environment export, Use 'conda env export -- froth-history' to export top-le
 ## robotics toolkit
 - `coacd`: Convex decomposition library
 - `urdf2mjcf`: assests format conversion
-
-
-
 
 
