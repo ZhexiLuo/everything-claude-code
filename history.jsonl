@@ -1,0 +1,10 @@
+{"display":"tell me about claude rule","pastedContents":{},"timestamp":1769532462326,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"!chmod -R +x ~/.claude/ 2>/dev/null || true","pastedContents":{},"timestamp":1769532626927,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"/config ","pastedContents":{},"timestamp":1769532634318,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"'/home/zhexi/.claude/settings.json' 加入{\n  \"hooks\": {\n    \"Notification\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"happy notify -t 'Claude needs input' -p 'Awaiting your response'\"\n          }\n        ]\n      }\n    ],\n    \"Stop\": [\n      {\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"happy notify -t 'Claude finished' -p 'Task completed'\"\n          }\n        ]\n      }\n    ]\n  },\n  \"model\": \"opus\"\n}\n","pastedContents":{},"timestamp":1769532832510,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"use emoji style output","pastedContents":{},"timestamp":1769532954433,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"no,  i mean use emoji style notify in setting.json","pastedContents":{},"timestamp":1769533013272,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"!git add .","pastedContents":{},"timestamp":1769533134966,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"!ls","pastedContents":{},"timestamp":1769533138905,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"!cd ./.claude","pastedContents":{},"timestamp":1769533149391,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
+{"display":"!git add .","pastedContents":{},"timestamp":1769533152974,"project":"/home/zhexi","sessionId":"363d982f-51db-45b8-9bde-4ecccc64ef38"}
