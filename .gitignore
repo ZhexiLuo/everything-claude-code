@@ -27,3 +27,16 @@ private/
 
 # Session templates (not committed)
 examples/sessions/*.tmp
+
+# Claude Code runtime files
+debug/
+file-history/
+history.jsonl
+shell-snapshots/
+todos/
+projects/
+.claude/settings.local.json
+
+# Telemetry and analytics
+statsig/
+telemetry/
