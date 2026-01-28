@@ -1,18 +1,11 @@
 # Performance Optimization
 
 ## Model Selection Strategy
-
-**Haiku 4.5** (90% of Sonnet capability, 3x cost savings):
-- Lightweight agents with frequent invocation
-- Pair programming and code generation
-- Worker agents in multi-agent systems
-
-**Sonnet 4.5** (Best coding model):
-- Main development work
+**Sonnet 4.5** (quick response for simple task):
+- simple coding development
 - Orchestrating multi-agent workflows
-- Complex coding tasks
 
-**Opus 4.5** (Deepest reasoning):
+**Opus 4.5** (high ability):
 - Complex architectural decisions
 - Maximum reasoning requirements
 - Research and analysis tasks

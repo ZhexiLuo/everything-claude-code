@@ -29,18 +29,7 @@ MANY SMALL FILES > FEW LARGE FILES:
 - Organize by feature/domain, not by type
 
 ## Error Handling
-
-ALWAYS handle errors comprehensively:
-
-```typescript
-try {
-  const result = await riskyOperation()
-  return result
-} catch (error) {
-  console.error('Operation failed:', error)
-  throw new Error('Detailed user-friendly message')
-}
-```
+Expose errors in advance and avoid excessive try-except
 
 ## Input Validation
 
