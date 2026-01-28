@@ -17,4 +17,4 @@ todo:
 - add python coding style
 - add tool use preference: ipdb, 
 - add happy for notification
-
+- collect a whole research skill repo: 
