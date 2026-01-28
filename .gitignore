@@ -40,3 +40,4 @@ projects/
 # Telemetry and analytics
 statsig/
 telemetry/
+settings.local.json
