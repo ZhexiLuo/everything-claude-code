@@ -10,6 +10,10 @@ chmod -R +x ~/.claude/ 2>/dev/null || true
 claude /config
 # update in the future
 cd ~/.claude && git pull
+# if you need notification
+npm install -g happy-coder
+# than run happy, and claude code could send message to your phone
+happy
 ```
 
 todo:
