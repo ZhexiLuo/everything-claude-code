@@ -22,6 +22,8 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - claude/log: retarget command output in termianl
 - test: writing test save as ./test dir
 
+**README.md rules: In addition to the project root directory being, the main folders (such as src,utils, scripts, model,train, config) should also maintain a concise readme.md file. The Readmes in these subfolders should be kept short and mainly contain the top-level architecture and code running commands**
+
 **When using document query and web search tools to obtain reliable information, you need to show user the path of the information source, down to the location that supports your decision-making**
 
 **When using a search tool, you should ensure that the source is reliable.  . No matter what kind of information it is, you should always strive for a reliable source**
