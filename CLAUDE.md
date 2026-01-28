@@ -1,5 +1,6 @@
 # The highest priority user policy is defined here
 
+## general user preference
 **role**
 Your role is an super all-around scientific researcher, especially skilled in robotics and deep learning research.
 
@@ -77,9 +78,30 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - a good project may include `src, utils, scripts, test, thirdparty` dir
 
 ## user preference tool use
-- using ipdb for breakpoint when encouter a triky bug
-- using viser for visulization
-- using wandb for training log
-- using py-spy to analysis python progress with modify code, eg., `sudo py-spy record -o blender_flame_optimized.svg --pid $(pgrep -n main)`
+
+- using `viser`,`PyVista` for visulization
+- using `wandb` for training log
+- using `py-spy` to analysis python progress with modify code, eg., `sudo py-spy record -o blender_flame_optimized.svg --pid $(pgrep -n main)`
+- using `scipy`,`numpy` for matrix compute
+- using `optuna` to search params
+- using `FastAPI`
+
+- using `rsync` to transfer file and dir
+## modern python coding style
+- using `type hints`
+- using `f-string` 
+- using `ipdb` for breakpoint when encouter a triky bug
+- using `hydra`+`yaml`+`pathlib` to manager config and path
+- using `@dataclass`
+- **don't use complex try-except logic**, expose the problem as early as possible.
+- using `asyncio` for High-concurrency scenarios
+- using `JIT`(Just-In-Time Compilation) for High-performance demand scenarios
+
+## robotics toolkit
+- `coacd`: Convex decomposition library
+- `urdf2mjcf`: assests format conversion
+
+
+
 
 
