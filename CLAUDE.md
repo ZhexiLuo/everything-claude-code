@@ -14,12 +14,12 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 **Output language: Use Chinese to communicate with users and write Claude documentation; use English for code comments and project README.md.**
 
 **Keep projects tidy:You are obligated to keep the project files organized, placing all generated documents and temporarily used files (such as test files) in the `/claude` folder at the root of the project.eg.,claude dir structure，build this dir when `/init`**
-- claude/out/: output of running command
-- claude/doc/plan/:  pecific plan to develop and debug
-- claude/doc/todo/: extrmely brief user todo plan(update when user ask claude code to plan/user update personaly)
-- claude/doc/bug-fix/
-- claude/log: retarget command output in termianl
-- test: writing test save as ./test dir
+- `claude/out/`: output of running command,eg., visulization, log, result.
+- `claude/doc/plan/`:  pecific plan to develop and debug
+- `claude/doc/todo/`: extrmely brief user todo plan(update when user ask claude code to plan/user update personaly)
+- `claude/doc/bug-fix/`
+- `claude/log`: retarget command output in termianl
+- test: writing test save as `claude/test` dir
 
 **When using document query and web search tools to obtain reliable information, you need to show user the path of the information source, down to the location that supports your decision-making**
 
