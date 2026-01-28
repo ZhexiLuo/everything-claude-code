@@ -75,6 +75,11 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 
 **don't git commit and push with claude code label, for example, prohibit "Co-Authored-By: Claude Sonnet 4.5"**
 
+**after development, call review skills/plugins automaticly, rethinking seceral questions, and keep improving until it is good enough**
+- Have I met the user's requirements? Can this requirement be fulfilled more simply
+- Did I make the mistake of reinventing the wheel? Can the partial implementation reuse the existing code or merge it？
+- Whether my modifications are consistent with the style of the existing code and comply with the project specifications
+
 ## project structure and data organize
 - for large datasets, using jsonl rather than json
 - a good project may include `src, utils, scripts, test, thirdparty` dir
