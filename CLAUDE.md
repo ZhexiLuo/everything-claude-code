@@ -93,8 +93,9 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - using `scipy`,`numpy` for matrix compute
 - using `optuna` to search params
 - using `FastAPI`
-
 - using `rsync` to transfer file and dir
+- using `fdfind`or`find` to scanning large datasets, `pathlib.rglob()` will be extremlly slow
+
 ## modern python coding style
 - using `type hints`
 - using `f-string` 
