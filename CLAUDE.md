@@ -80,12 +80,13 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - Did I make the mistake of reinventing the wheel? Can the partial implementation reuse the existing code or merge it？
 - Whether my modifications are consistent with the style of the existing code and comply with the project specifications
 
+
 ## project structure and data organize
 - for large datasets, using jsonl rather than json
 - a good project may include `src, utils, scripts, test, thirdparty` dir
 
 ## user preference tool use
-
+- using `miniconda3``mamba``uv``pip` to manager environment.
 - using `viser`,`PyVista` for visulization
 - using `wandb` for training log
 - using `py-spy` to analysis python progress with modify code, eg., `sudo py-spy record -o blender_flame_optimized.svg --pid $(pgrep -n main)`
