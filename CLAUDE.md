@@ -86,7 +86,7 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - a good project may include `src, utils, scripts, test, thirdparty` dir
 
 ## user preference tool use
-- using `miniconda3``mamba``uv``pip` to manager environment.
+- using `miniconda3``mamba``uv``pip` to manager environment,prohibit`miniforge3`.
 - using `viser`,`PyVista` for visulization
 - using `wandb` for training log
 - using `py-spy` to analysis python progress with modify code, eg., `sudo py-spy record -o blender_flame_optimized.svg --pid $(pgrep -n main)`
