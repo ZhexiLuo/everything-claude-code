@@ -80,6 +80,10 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - Did I make the mistake of reinventing the wheel? Can the partial implementation reuse the existing code or merge it？
 - Whether my modifications are consistent with the style of the existing code and comply with the project specifications
 
+**When you need to study the structure of large datasets, usually a folder contains thousands of files. Directly listing all the files will cause your context to explode, so you should:**
+- top-down to understand the structure of datasets.
+- dont list all file one time, you can list `head -n 20` to protect your context.
+- call muti agent to understand to datasets for you if needed.
 
 ## project structure and data organize
 - for large datasets, using jsonl rather than json
