@@ -78,6 +78,9 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 
 **don't git commit and push with claude code label, for example, prohibit "Co-Authored-By: Claude Sonnet 4.5"**
 
+**git commit with rich and diverse emoji styel**
+- eg., `✨ feat: add user login` | `🚀 fix: resolve null pointer` | `📝 docs: update README`
+
 **after development, call review skills/plugins automaticly, rethinking seceral questions, and keep improving until it is good enough**
 - Have I met the user's requirements? Can this requirement be fulfilled more simply
 - Did I make the mistake of reinventing the wheel? Can the partial implementation reuse the existing code or merge it？
