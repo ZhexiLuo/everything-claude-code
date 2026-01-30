@@ -28,6 +28,8 @@ git pull origin
 /plugin install claude-mem
 # restart Claude Code to activate
 ```
-
+## ⭕️bug-fix
+- TypeScript check hook failed because tsc was not globally installed; fixed by running npm install -g typescript.
+- Node.js v24+ hook escape error: `if(!process.env.TMUX)` causes `SyntaxError: Invalid or unexpected token` due to stricter escape handling. Fix: change `!` to `=== undefined`, e.g., `if(process.env.TMUX === undefined)`.         
 ## 📋 Todo
 - 🔬 support more research skills.
