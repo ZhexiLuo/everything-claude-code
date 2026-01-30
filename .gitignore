@@ -29,10 +29,16 @@ private/
 examples/sessions/*.tmp
 
 # Claude Code runtime files
+cache/
 debug/
 file-history/
 history.jsonl
+ide/
+plans/
+session-env/
+sessions/
 shell-snapshots/
+stats-cache.json
 todos/
 projects/
 .claude/settings.local.json
