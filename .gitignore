@@ -8,6 +8,8 @@
 *.pem
 secrets.json
 
+*.lock
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -42,8 +44,11 @@ stats-cache.json
 todos/
 projects/
 .claude/settings.local.json
+history.jsonl
+stats-cache.json
 
 # Telemetry and analytics
 statsig/
 telemetry/
 settings.local.json
+.update.lock
