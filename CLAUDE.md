@@ -44,30 +44,28 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 
 **Follow Occam's razor and code like Linus.**
 
-**debug work flows:**
+debug work flows:
 - Understand the problem and analyze the code
 - Propose possible causes (probability from high to low)
 - Verify whether this potential cause really led to the problem, which usually requires writing test code or running commands
 - Propose the fix plan and execute it
 
-**coding style:Use modern Python programming style to write maintainable, abstract, and highly encapsulated code, using type annotations, Hydra decorators, and other excellent features**
-
-**keep CLAUDE.md short: keep the document short, only include most important infomation, eg., project structure, running environment and commands, top-down design...**
+keep CLAUDE.md short: keep the document short, only include most important infomation, eg., project structure, running environment and commands, top-down design...
 
 **claude dir: each project should have a /claude dir for claude code document**
 - history.md: summarize important claude code history here
 - bug-fix.md: summarize bug you meet when you develop this project, which help claude code dont make wrong twice.
 
 
-**reatrget terminal output when run command: When running code related to tasks or code that requires waiting for a certain period, you should redirect the terminal output to the project's `/claude/log/` folder and clearly inform the user of the path.**
+reatrget terminal output when run command: When running code related to tasks or code that requires waiting for a certain period, you should redirect the terminal output to the project's `/claude/log/` folder and clearly inform the user of the path.
 
-**For parallel processing tasks, a simple implementation is to first load the list of all tasks, and then divide all tasks into uniform n tasks and distribute them to n processes for execution**
+For parallel processing tasks, a simple implementation is to first load the list of all tasks, and then divide all tasks into uniform n tasks and distribute them to n processes for execution
 
-**Don't overdesign: Only provide the simplest implementation that meets the user's requirements**
+Don't overdesign: Only provide the simplest implementation that meets the user's requirements
 
-**Prohibit redundant exception handling and consider edge cases**
+Prohibit redundant exception handling and consider edge cases
 
-**using context7 tools to search document**
+using context7 tools to search document
 
 **Break down large tasks into small independent tasks and use sub-agents,eg.,**
 - There are several possible potential problems in debug mode
@@ -78,9 +76,11 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - good practice: call agent1, agent2... agentn for different and dependent task,then gather all results.
 - bad practice: call agent1 -> agent2 -> agent3 one by one, several minutes pass...
 
-**You should be aware of your limited capabilities and be trained based on past and Internet corpora. Therefore, when a problem has been bothering you for a long time (perhaps three times), you should proactively seek help or look for tools such as search, plugins, or skills.**
+You should be aware of your limited capabilities and be trained based on past and Internet corpora. Therefore, when a problem has been bothering you for a long time (perhaps three times), you should proactively seek help or look for tools such as search, plugins, or skills.
 
-**don't git commit and push with claude code label, for example, prohibit "Co-Authored-By: Claude Sonnet 4.5"**
+don't git commit and push with claude code label, for example, prohibit "Co-Authored-By: Claude Sonnet 4.5"
+
+Don't execute `git commit` at detached HEAD
 
 **git commit with rich and diverse emoji styel**
 - eg., `✨ feat: add user login` | `🚀 fix: resolve null pointer` | `📝 docs: update README`
@@ -94,6 +94,8 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - top-down to understand the structure of datasets.
 - dont list all file one time, you can list `head -n 20` to protect your context.
 - call muti agent to understand to datasets for you if needed.
+
+
 
 ## project structure and data organize
 - for large datasets, using jsonl rather than json
@@ -111,6 +113,7 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - using `fdfind`or`find` to scanning large datasets, `pathlib.rglob()` will be extremlly slow
 
 ## modern python coding style
+**coding style:Use modern Python programming style to write maintainable, abstract, and highly encapsulated code, using type annotations, Hydra decorators, and other excellent features**
 - using `type hints`
 - using `f-string` 
 - using `ipdb` for breakpoint when encouter a triky bug
