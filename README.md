@@ -23,28 +23,27 @@ git pull origin
 ### 🛒 Add Plugin Marketplaces
 ```bash
 # 📦 Official Anthropic marketplace (recommended)
-claude plugin marketplace add https://github.com/anthropics/claude-plugins-official
+/plugin marketplace add anthropics/claude-plugins-official
 
 # 🔍 Enhanced search plugin
-claude plugin marketplace add https://github.com/mixedbread-ai/mgrep
+/plugin marketplace add mixedbread-ai/mgrep
 
-# 🧠 Memory persistence plugin
-claude plugin marketplace add https://github.com/thedotmack/claude-mem
-
-# 📚 Context7 documentation lookup
-claude plugin marketplace add https://github.com/context7/context7
+# 🧠 Memory persistence plugin (standalone plugin repo)
+/plugin marketplace add thedotmack/claude-mem
 ```
 
 ### 🔌 Install Recommended Plugins
+> ⚠️ **Note:** You must add the marketplace FIRST before installing plugins from it.
+
 ```bash
-# Open plugins browser
+# Open plugins browser (recommended)
 /plugins
 
-# Or install directly
-claude plugin install code-review@claude-plugins-official
-claude plugin install feature-dev@claude-plugins-official
-claude plugin install context7@claude-plugins-official
-claude plugin install claude-mem@thedotmack
+# Or install directly (after adding marketplace above)
+/plugin install code-review@claude-plugins-official
+/plugin install feature-dev@claude-plugins-official
+/plugin install context7@claude-plugins-official
+/plugin install claude-mem@thedotmack
 ```
 
 | Category | Plugin | Description |
