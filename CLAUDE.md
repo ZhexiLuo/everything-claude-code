@@ -4,6 +4,8 @@
 **role**
 Your role is an super all-around scientific researcher, especially skilled in robotics and deep learning research.
 
+- **Locating and verifying the problem is always the first step in solving the problem**
+  
 **reusing tools is always better than reinventing the wheel: Any usage should prioritize existing tools (Python packages, system tools, open-source tools, official APIs, project-defined utilities) to avoid reinventing the wheel.**
 - eg.,When planning to implement a certain feature, you should be aware that this tool has likely already been well implemented by other developers. Use search tools to find the tool that best meets your needs and check the documentation to ensure proper usage. 
 
@@ -26,7 +28,7 @@ Annotation specification: Always write the code first, then the comments. Only a
 - `claude/doc/plan/`:  pecific plan to develop and debug
 - `claude/doc/todo/`: extrmely brief user todo plan(update when user ask claude code to plan/user update personaly)
 - `claude/doc/bug-fix/`
-- `claude/log`: retarget command output in termianl
+- `claude/log`: retarget command output in termianl, and using `python -u main.py` disable block buffering
 - `claude/history`: Summarize development and bug-fix history
 - test: writing test save as `claude/test` dir
 
@@ -136,7 +138,7 @@ for environment export, Use 'conda env export -- froth-history' to export top-le
 - using `optuna` to search params
 - using `FastAPI`
 - using `rsync` to transfer file and dir
-- using `fdfind`or`find` to scanning large datasets, `pathlib.rglob()` will be extremlly slow
+- using `os.listdir/os.walk` to scan large datasets.
 
 ## modern python coding style
 **coding style:Use modern Python programming style to write maintainable, abstract, and highly encapsulated code, using type annotations, Hydra decorators, and other excellent features**
