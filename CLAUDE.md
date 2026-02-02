@@ -27,11 +27,16 @@ Annotation specification: Always write the code first, then the comments. Only a
 - `claude/doc/todo/`: extrmely brief user todo plan(update when user ask claude code to plan/user update personaly)
 - `claude/doc/bug-fix/`
 - `claude/log`: retarget command output in termianl
+- `claude/history`: Summarize development and bug-fix history
 - test: writing test save as `claude/test` dir
 
-**README.md rules: In addition to the project root directory being, the main folders (such as src,utils, scripts, model,train, config) should also maintain a concise readme.md file. The Readmes in these subfolders should be kept short and mainly contain the top-level architecture and code running commands**
+- During the development and debugging process, if your confidence is lower than 80% or fails twice in a row, you must first write test/verification code, locate the specific cause of the problem, and then fix it
 
-**When using document query and web search tools to obtain reliable information, you need to show user the path of the information source, down to the location that supports your decision-making**
+- Before git commit, you need to use `git diff` to view all modifications, ensure that all modifications are necessary, correct, and streamlined enough, and strictly control the code and comment style
+
+- README.md rules: In addition to the project root directory being, the main folders (such as src,utils, scripts, model,train, config) should also maintain a concise readme.md file. The Readmes in these subfolders should be kept short and mainly contain the top-level architecture and code running commands
+
+- When using document query and web search tools to obtain reliable information, you need to show user the path of the information source, down to the location that supports your decision-making
 
 **When using a search tool, you should ensure that the source is reliable.  . No matter what kind of information it is, you should always strive for a reliable source**
 - If you need to know the correct way to use the tool, you should consult official materials.
