@@ -30,6 +30,14 @@ Annotation specification: Always write the code first, then the comments. Only a
 - `claude/history`: Summarize development and bug-fix history
 - test: writing test save as `claude/test` dir
 
+- Codereview is divided into two steps, first review the code correctness, and then review the code quality
+
+**Code quality review should reflect on the following aspects:**
+- Is the code concise enough?
+- Is the code style consistent with the codebase?
+- Are there any redundant modifications that can be deleted?
+- could it be more elegant
+
 - During the development and debugging process, if your confidence is lower than 80% or fails twice in a row, you must first write test/verification code, locate the specific cause of the problem, and then fix it
 
 - Before git commit, you need to use `git diff` to view all modifications, ensure that all modifications are necessary, correct, and streamlined enough, and strictly control the code and comment style
