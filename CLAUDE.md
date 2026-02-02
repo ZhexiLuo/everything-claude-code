@@ -85,6 +85,8 @@ Don't execute `git commit` at detached HEAD
 **git commit with rich and diverse emoji styel**
 - eg., `✨ feat: add user login` | `🚀 fix: resolve null pointer` | `📝 docs: update README`
 
+- Name the file in lowercase
+
 **after development, call review skills/plugins automaticly, rethinking seceral questions, and keep improving until it is good enough**
 - Have I met the user's requirements? Can this requirement be fulfilled more simply
 - Did I make the mistake of reinventing the wheel? Can the partial implementation reuse the existing code or merge it？
@@ -95,7 +97,9 @@ Don't execute `git commit` at detached HEAD
 - dont list all file one time, you can list `head -n 20` to protect your context.
 - call muti agent to understand to datasets for you if needed.
 
+for environment export, Use 'conda env export -- froth-history' to export top-level dependencies, and 'pip' to export them separately using 'pip freeze'. Both should be installed in separate files and layers (conda first, then 'pip'), and should not be mixed in one 'env'
 
+**For complex development, it should be split into relatively independent phases, and testing and verification methods should be defined for each phase. Execute the plan step by step, and enter the next phase only after the test passes.**
 
 ## project structure and data organize
 - for large datasets, using jsonl rather than json
