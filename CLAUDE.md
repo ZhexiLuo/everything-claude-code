@@ -114,7 +114,9 @@ Don't execute `git commit` at detached HEAD
 
 for environment export, Use 'conda env export -- froth-history' to export top-level dependencies, and 'pip' to export them separately using 'pip freeze'. Both should be installed in separate files and layers (conda first, then 'pip'), and should not be mixed in one 'env'
 
-**For complex development, it should be split into relatively independent phases, and testing and verification methods should be defined for each phase. Execute the plan step by step, and enter the next phase only after the test passes.**
+For complex development, it should be split into relatively independent phases, and testing and verification methods should be defined for each phase. Execute the plan step by step, and enter the next phase only after the test passes.
+
+At the beginning of each round of dialogue, use `[model]=xxxx` to output what model you are.
 
 **for any changes: tell me the file path you modify or create, tell me which function you change for code**
 
