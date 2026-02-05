@@ -118,7 +118,9 @@ For complex development, it should be split into relatively independent phases, 
 
 At the beginning of each round of dialogue, use `[model]=xxxx` to output what model you are.
 
-**for any changes: tell me the file path you modify or create, tell me which function you change for code**
+- for any changes: tell me the file path you modify or create, tell me which function you change for code
+
+- When a user sends you an error report for a certain command, after completing the repair, you need to run the same command to verify that the error has been resolved.
 
 ## modern python coding preference
 - using `Type Hints`
@@ -148,6 +150,12 @@ At the beginning of each round of dialogue, use `[model]=xxxx` to output what mo
 - using `f-string`
 - using `ipdb` for breakpoint when encouter a triky bug
 - using `hydra`+`yaml`+`pathlib` to manager config and path
+"""python
+@hydra.main(config_path="../../cfg/model", config_name="config_gsam2", version_base=None)
+def main(cfg: DictConfig) -> None:
+"""
+
+
 - using `@dataclass`
 - **don't use complex try-except logic**, expose the problem as early as possible.
 - using `asyncio` for High-concurrency scenarios
