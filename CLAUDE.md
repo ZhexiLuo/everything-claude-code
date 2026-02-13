@@ -100,6 +100,8 @@ Don't execute `git commit` at detached HEAD
 **git commit with rich and diverse emoji styel**
 - eg., `✨ feat: add user login` | `🚀 fix: resolve null pointer` | `📝 docs: update README`
 
+- Do not automatically commit or use 'git add .' for code; you can ask me whether it needs to be committed.
+
 - Name the file in lowercase
 
 **after development, call review skills/plugins automaticly, rethinking seceral questions, and keep improving until it is good enough**
