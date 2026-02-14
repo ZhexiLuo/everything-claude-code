@@ -72,7 +72,7 @@ keep CLAUDE.md short: keep the document short, only include most important infom
 - bug-fix.md: summarize bug you meet when you develop this project, which help claude code dont make wrong twice.
 
 
-reatrget terminal output when run command: When running code related to tasks or code that requires waiting for a certain period, you should redirect the terminal output to the project's `/claude/log/` folder and clearly inform the user of the path.
+reatrget terminal output when run command: When running code related to tasks or code that requires waiting for a certain period, you should redirect the terminal output to the project's `/claude/log/` folder and clearly inform the user of the absolutly path.
 
 For parallel processing tasks, a simple implementation is to first load the list of all tasks, and then divide all tasks into uniform n tasks and distribute them to n processes for execution
 
