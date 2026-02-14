@@ -15,6 +15,8 @@ Exception handling outputs the original error message and prohibits excessive pa
 
 Any general requirement exceeding 10 lines may be simplified by the encapsulated interface, remember don't make thing complex
 
+- Do not run git add & git commit when I haven't explicitly requested it
+  
 **Output using friendly emojis：Whether it's chatting with users or outputting in code, using emojis helps users quickly focus on important content.**
 - eg.,`print("\n" + Fore.GREEN + emoji.emojize("🚀 All Task Finished! 🎉") + Style.RESET_ALL)`
 
