@@ -156,9 +156,7 @@ At the beginning of each round of dialogue, use `[model]=xxxx` to output what mo
 @hydra.main(config_path="../../cfg/model", config_name="config_gsam2", version_base=None)
 def main(cfg: DictConfig) -> None:
 """
-
-
-- using `@dataclass`
+- using `Pydantic v2`Encapsulate data structures and type checking
 - **don't use complex try-except logic**, expose the problem as early as possible.
 - using `asyncio` for High-concurrency scenarios
 - using `JIT`(Just-In-Time Compilation) for High-performance demand scenarios
