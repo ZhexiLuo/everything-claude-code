@@ -147,6 +147,7 @@ At the beginning of each round of dialogue, use `[model]=xxxx` to output what mo
 - using `FastAPI`
 - using `rsync` to transfer file and dir
 - using `os.listdir/os.walk` to scan large datasets.
+- using `BlenderProc` scientific research level assests rendering
 
 ## modern python coding style
 **coding style:Use modern Python programming style to write maintainable, abstract, and highly encapsulated code, using type annotations, Hydra decorators, and other excellent features**
