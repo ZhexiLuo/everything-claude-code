@@ -32,6 +32,9 @@ git pull origin
 /plugin marketplace add thedotmack/claude-mem
 ```
 
+### 更新 claude code 最新版
+`npm install -g @anthropic-ai/claude-code@latest `
+
 ### 🔌 Install Recommended Plugins
 > ⚠️ **Note:** You must add the marketplace FIRST before installing plugins from it.
 
