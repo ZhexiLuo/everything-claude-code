@@ -1,6 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "model": "opus",
   "permissions": {
     "defaultMode": "default"
   },
@@ -11,12 +10,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "happy notify -t '🤔 Claude need input' -p '💬 waiting for your reponse...'"
+            "command": "node /home/zhexi/.npm-global/lib/node_modules/happy-coder/bin/happy.mjs notify -t '🤔 Claude need input' -p '💬 waiting for your reponse...'"
           }
         ]
       }
     ],
-    
     "PreToolUse": [
       {
         "matcher": "tool == \"Bash\" && tool_input.command matches \"(npm run dev|pnpm( run)? dev|yarn dev|bun run dev)\"",
@@ -139,7 +137,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "happy notify -t '🎉 Claude finished' -p '✅ all tasks finish'"
+            "command": "node /home/zhexi/.npm-global/lib/node_modules/happy-coder/bin/happy.mjs notify -t '🎉 Claude finished' -p '✅ all tasks finish'"
           }
         ]
       }
@@ -172,7 +170,11 @@
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "ralph-loop@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "superpowers@superpowers-marketplace": true,
+    "ralph-skills@ralph-marketplace": true
   },
-  "skipWebFetchPreflight": true
+  "skipWebFetchPreflight": true,
+  "skipDangerousModePermissionPrompt": true,
+  "model": "opus"
 }
