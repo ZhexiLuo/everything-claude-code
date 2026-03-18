@@ -160,10 +160,10 @@ end
 ### 5. Clone Claude Code Config Project
 
 ```bash
-git clone https://github.com/ZhexiLuo/everything-claude-code.git ~/everything-claude-code
+git clone https://github.com/ZhexiLuo/everything-claude-code.git ~/.claude
 ```
 
-This provides pre-configured agents, hooks, rules, skills, settings, and MCP configs for Claude Code.
+This clones directly as the Claude Code config directory, providing pre-configured agents, hooks, rules, skills, settings, and MCP configs.
 
 ### 6. Verify
 
