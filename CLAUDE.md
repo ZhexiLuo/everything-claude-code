@@ -132,6 +132,7 @@ At the beginning of each round of dialogue, use `[model]=xxxx` to output what mo
 - using `Hydra`,`pathlib` manger path and config
 - using `async/await` to asynchronous programming
 
+- When using conda install, pip install, Huggingface, GitHub, etc., the default is to prioritize using mirror nodes within China.
 
 ## project structure and data organize
 - for large datasets, using jsonl rather than json
@@ -160,7 +161,7 @@ At the beginning of each round of dialogue, use `[model]=xxxx` to output what mo
 def main(cfg: DictConfig) -> None:
 """
 - using `Pydantic v2`Encapsulate data structures and type checking
-- **don't use complex try-except logic**, expose the problem as early as possible.
+- **don't use complex try-except logic**, using fast fail design philosophy, expose the problem as early as possible.
 - using `asyncio` for High-concurrency scenarios
 - using `JIT`(Just-In-Time Compilation) for High-performance demand scenarios
 
