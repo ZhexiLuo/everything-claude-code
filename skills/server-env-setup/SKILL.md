@@ -47,6 +47,7 @@ Bootstrap a fresh Linux server for Python/ML development: conda + uv + fish + cl
 | claude code | `npm install -g @anthropic-ai/claude-code` | env vars in shell rc |
 | pip mirror | config file | `~/.config/pip/pip.conf` |
 | HuggingFace mirror | env var | `HF_ENDPOINT` in shell rc |
+| nvitop | `pip install nvitop` | — |
 
 ## Step-by-Step
 
@@ -69,6 +70,9 @@ sudo apt-get install -y fish
 # If npm global install fails due to permissions:
 mkdir -p ~/.npm-global && npm config set prefix ~/.npm-global
 npm install -g @anthropic-ai/claude-code
+
+# 📊 nvitop (GPU monitor)
+pip install nvitop
 ```
 
 ### 2. Configure China Mirrors
