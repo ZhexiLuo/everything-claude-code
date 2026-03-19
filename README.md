@@ -30,6 +30,9 @@ git pull origin
 
 # 🧠 Memory persistence plugin (standalone plugin repo)
 /plugin marketplace add thedotmack/claude-mem
+
+# 📝 Planning with files plugin
+/plugin marketplace add OthmanAdi/planning-with-files
 ```
 
 ### 更新 claude code 最新版
@@ -47,6 +50,7 @@ git pull origin
 /plugin install feature-dev@claude-plugins-official
 /plugin install context7@claude-plugins-official
 /plugin install claude-mem@thedotmack
+/plugin install planning-with-files@planning-with-files
 ```
 
 | Category | Plugin | Description |
@@ -59,6 +63,7 @@ git pull origin
 | ✅ Quality | `security-guidance` | Security checks |
 | 🔄 Workflow | `feature-dev` | Feature development |
 | 🧠 Memory | `claude-mem` | Persistent memory across sessions |
+| 📝 Planning | `planning-with-files` | File-based planning ([OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files)) |
 ## ⭕️bug-fix
 - TypeScript check hook failed because tsc was not globally installed; fixed by running npm install -g typescript.
 - Node.js v24+ hook escape error: `if(!process.env.TMUX)` causes `SyntaxError: Invalid or unexpected token` due to stricter escape handling. Fix: change `!` to `=== undefined`, e.g., `if(process.env.TMUX === undefined)`.         
