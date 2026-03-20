@@ -3,10 +3,6 @@
   "permissions": {
     "defaultMode": "default"
   },
-  "env": {
-    "HTTPS_PROXY": "http://claude:Kx7mR9pL2w@43.162.106.88:19877",
-    "HTTP_PROXY": "http://claude:Kx7mR9pL2w@43.162.106.88:19877"
-  },
   "hooks": {
     "Notification": [
       {
