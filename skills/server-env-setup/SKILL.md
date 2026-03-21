@@ -18,24 +18,48 @@ Bootstrap a fresh Linux server for Python/ML development: conda + uv + fish + cl
 ## Prerequisites
 
 - SSH access to target server (`ssh <alias>`)
-- Node.js 18+ (for claude code)
 
 ## ⚠️ Before Starting
 
-**Ask the user to complete these steps first:**
+### Step 0: User Account Setup (if SSH config uses root)
 
-1. **Run sudo commands on the target server** (Claude Code cannot input sudo password via SSH):
+If the target server's SSH config has `User root`, create a `zhexi` user first:
+
+1. SSH to server as root and create user with sudo privileges:
    ```bash
-   ssh <server>
-   sudo apt-get update && sudo apt-get install -y fish
+   useradd -m -s /bin/bash zhexi && echo 'zhexi:zhexi' | chpasswd && usermod -aG sudo zhexi
    ```
+2. Deploy local SSH public key to the new user:
+   ```bash
+   # Run from local machine (as root on remote)
+   ssh <server> "mkdir -p /home/zhexi/.ssh && cat >> /home/zhexi/.ssh/authorized_keys && chmod 700 /home/zhexi/.ssh && chmod 600 /home/zhexi/.ssh/authorized_keys && chown -R zhexi:zhexi /home/zhexi/.ssh" < ~/.ssh/id_rsa.pub
+   ```
+3. Update local `~/.ssh/config` to use `User zhexi` instead of `User root`
+4. Verify: `ssh <server> whoami` should output `zhexi`
 
-2. **Provide Anthropic API keys and base URL.** User can provide multiple keys for load balancing (random rotation per session):
-   ```
-   Keys:    sk-xxx-key1, sk-xxx-key2, sk-xxx-key3, ...
-   BaseURL: https://your-api-endpoint.com/api
-   ```
-   The more keys provided, the better the rate limit distribution.
+> ⚠️ **NFS shared home**: If multiple servers share the same NFS home directory, ensure `zhexi` has the same UID/GID across all servers. Mismatched UIDs cause SSH pubkey auth failures. Fix with `usermod -u <uid> zhexi` or edit `/etc/passwd` directly.
+
+### Step 1: Run sudo commands (user must do this manually)
+
+Claude Code cannot input sudo password via SSH. Give the user this one-liner to run on the target server:
+
+```bash
+sudo apt-get update && sudo apt-get install -y fish
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt-get install -y nodejs
+```
+
+This installs fish shell and Node.js 22 (required for claude code CLI).
+
+### Step 2: Provide Anthropic API keys
+
+Ask the user for API keys and base URL. Multiple keys enable load balancing (random rotation per session):
+
+```
+Keys:    sk-xxx-key1, sk-xxx-key2, sk-xxx-key3, ...
+BaseURL: https://your-api-endpoint.com/api
+```
+
+The more keys provided, the better the rate limit distribution.
 
 ## Quick Reference
 
@@ -43,7 +67,7 @@ Bootstrap a fresh Linux server for Python/ML development: conda + uv + fish + cl
 |------|---------------|-----------------|
 | conda | miniconda installer | `~/.condarc` |
 | uv | `curl astral.sh/uv/install.sh` | `~/.config/uv/uv.toml` |
-| fish | `sudo apt install fish` | `~/.config/fish/config.fish` |
+| fish | sudo apt install (see Before Starting) | `~/.config/fish/config.fish` |
 | claude code | `npm install -g @anthropic-ai/claude-code` | env vars in shell rc |
 | pip mirror | config file | `~/.config/pip/pip.conf` |
 | HuggingFace mirror | env var | `HF_ENDPOINT` in shell rc |
@@ -62,11 +86,7 @@ bash /tmp/miniconda.sh -b -p $HOME/miniconda3
 # 🦀 uv (Python package manager)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# 🐟 Fish shell
-sudo apt-get install -y fish
-# Alternative without sudo: conda install -c conda-forge fish
-
-# 🤖 Claude Code CLI (needs Node.js 18+)
+# 🤖 Claude Code CLI (needs Node.js 18+, installed in Before Starting)
 # If npm global install fails due to permissions:
 mkdir -p ~/.npm-global && npm config set prefix ~/.npm-global
 npm install -g @anthropic-ai/claude-code
@@ -116,14 +136,15 @@ EOF
 Append to `~/.bashrc`:
 
 ```bash
-# 🔑 Anthropic API Configuration
+# 🔑 Anthropic API Configuration (random key rotation)
+unset ANTHROPIC_AUTH_TOKEN
+unset ANTHROPIC_BASE_URL
 _ANTHROPIC_KEYS=(
     "<key1>"
     "<key2>"
 )
+export ANTHROPIC_AUTH_TOKEN="${_ANTHROPIC_KEYS[$((RANDOM % ${#_ANTHROPIC_KEYS[@]}))]}"
 export ANTHROPIC_BASE_URL="<your-api-base-url>"
-export ANTHROPIC_AUTH_TOKEN="${_ANTHROPIC_KEYS[$((RANDOM % 2))]}"
-unset ANTHROPIC_API_KEY
 
 # 🛠️ PATH: npm global + uv
 export PATH="$HOME/.npm-global/bin:$HOME/.local/bin:$PATH"
@@ -137,10 +158,10 @@ export HF_ENDPOINT="https://hf-mirror.com"
 Write to `~/.config/fish/config.fish`:
 
 ```fish
-# 🔑 Anthropic API Configuration
+# 🔑 Anthropic API Configuration (random key rotation)
 set _anthropic_keys "<key1>" "<key2>"
 set -gx ANTHROPIC_BASE_URL "<your-api-base-url>"
-set -gx ANTHROPIC_AUTH_TOKEN $_anthropic_keys[(random 1 2)]
+set -gx ANTHROPIC_AUTH_TOKEN $_anthropic_keys[(random 1 (count $_anthropic_keys))]
 if set -q ANTHROPIC_API_KEY
     set -e ANTHROPIC_API_KEY
 end
