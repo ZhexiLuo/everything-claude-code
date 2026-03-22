@@ -7,6 +7,10 @@ What is directly supported by Codex and included here:
 - `config.toml`
 - `agents/*.toml`
 
+Important:
+- Do not overwrite or modify your existing `~/.codex/config.toml` when syncing this bundle.
+- Treat the bundled `config.toml` as a reference example only, and merge settings manually if needed.
+
 What is migrated here as portable reference material:
 - `rules-md/*.md`
 
@@ -19,14 +23,14 @@ Why `skills/` is still here:
 - Official Codex skill discovery is not based on `~/.codex/skills`; it uses `~/.agents/skills`.
 
 Recommended global usage:
-1. Sync this folder to `~/.codex`.
+1. Sync this folder to `~/.codex`, but do not overwrite `~/.codex/config.toml`.
 2. Codex will directly use:
    - `~/.codex/AGENTS.md`
-   - `~/.codex/config.toml`
    - `~/.codex/agents/*.toml`
-3. If you want Codex to auto-discover the migrated skills globally, also copy or symlink:
+3. Keep your existing `~/.codex/config.toml` unchanged.
+4. If you want Codex to auto-discover the migrated skills globally, also copy or symlink:
    - `~/.codex/skills` -> `~/.agents/skills`
-4. Helper script included:
+5. Helper script included:
    - `~/.codex/scripts/sync-skills-to-agents.sh`
    - default usage: `~/.codex/scripts/sync-skills-to-agents.sh`
 
