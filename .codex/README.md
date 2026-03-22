@@ -26,6 +26,9 @@ Recommended global usage:
    - `~/.codex/agents/*.toml`
 3. If you want Codex to auto-discover the migrated skills globally, also copy or symlink:
    - `~/.codex/skills` -> `~/.agents/skills`
+4. Helper script included:
+   - `~/.codex/scripts/sync-skills-to-agents.sh`
+   - default usage: `~/.codex/scripts/sync-skills-to-agents.sh`
 
 What was intentionally not migrated as a first-class Codex config:
 - The repository `rules/*.md` files were copied into `rules-md/`, not converted into `.rules` files.
