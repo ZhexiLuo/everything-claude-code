@@ -64,7 +64,7 @@ This is the preferred path because it provides `nodejs/npm` before the install s
 
 ## Recommended Workflow
 
-### 1. Install core tools
+### 1. Install base tools
 
 ```bash
 # Miniconda
@@ -78,6 +78,28 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 # Verify node and npm first
 node --version
 npm --version
+```
+
+### 2. Setup Claude and Codex config first
+
+Do this before running either install script so the repository is already present in `~/.claude`.
+
+```bash
+git clone https://github.com/ZhexiLuo/everything-claude-code.git ~/.claude
+mkdir -p ~/.codex
+rsync -av --delete ~/.claude/.codex/ ~/.codex/
+mkdir -p ~/.agents
+ln -sfn ~/.codex/skills ~/.agents/skills
+```
+
+Follow `.codex/README.md`:
+- keep runtime config in `~/.codex`
+- keep `~/.codex/config.toml` unchanged
+- link skills through `~/.agents/skills`
+
+### 3. Install Claude Code and Codex
+
+```bash
 
 # Claude Code
 if ! command -v claude >/dev/null 2>&1; then
@@ -93,7 +115,7 @@ fi
 pip install nvitop
 ```
 
-### 2. Configure package mirrors
+### 4. Configure package mirrors
 
 ```bash
 # pip
@@ -129,7 +151,7 @@ default = true
 EOF
 ```
 
-### 3. Configure shell
+### 5. Configure shell
 
 Append to `~/.bashrc`:
 
@@ -149,21 +171,6 @@ if test -f $HOME/miniconda3/etc/fish/conf.d/conda.fish
     source $HOME/miniconda3/etc/fish/conf.d/conda.fish
 end
 ```
-
-### 4. Sync Codex bundle
-
-```bash
-git clone https://github.com/ZhexiLuo/everything-claude-code.git ~/.claude
-mkdir -p ~/.codex
-rsync -av --delete ~/.claude/.codex/ ~/.codex/
-mkdir -p ~/.agents
-ln -sfn ~/.codex/skills ~/.agents/skills
-```
-
-Follow `.codex/README.md`:
-- keep runtime config in `~/.codex`
-- keep `~/.codex/config.toml` unchanged
-- link skills through `~/.agents/skills`
 
 ## Fallback For GitHub Network Problems
 
@@ -204,6 +211,7 @@ test -L ~/.agents/skills && readlink ~/.agents/skills
 ## Common Mistakes
 
 - Running the install scripts before `nodejs/npm` exists
+- Running the Claude or Codex install scripts before the repo is cloned into `~/.claude`
 - Letting the scripts bootstrap NVM on a server with poor GitHub access
 - Retrying GitHub downloads on the server instead of using local download plus `rsync`
 - Editing `~/.codex/config.toml` for skill discovery
