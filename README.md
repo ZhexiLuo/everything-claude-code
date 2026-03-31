@@ -33,6 +33,11 @@ git pull origin
 
 # 📝 Planning with files plugin
 /plugin marketplace add OthmanAdi/planning-with-files
+
+# plugin to call codex
+/plugin marketplace add openai/codex-plugin-cc
+# A Claude Code plugin that shows what's happening — context usage, active tools, running agents, and todo progress. Always visible below your input.
+/plugin marketplace add jarrodwatts/claude-hud
 ```
 
 ### 更新 claude code 最新版
@@ -51,6 +56,9 @@ git pull origin
 /plugin install context7@claude-plugins-official
 /plugin install claude-mem@thedotmack
 /plugin install planning-with-files@planning-with-files
+/plugin install codex@openai-codex
+/plugin install claude-hud
+and reload pulgin and  run `/claude-hud:setup`
 ```
 
 | Category | Plugin | Description |
