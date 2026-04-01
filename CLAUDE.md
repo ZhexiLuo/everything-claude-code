@@ -125,6 +125,16 @@ Don't execute `git commit` at detached HEAD
 - dont list all file one time, you can list `head -n 20` to protect your context.
 - call muti agent to understand to datasets for you if needed.
 
+**Model collaboration: You run as either Claude or Codex (ChatGPT) and can call each other. Use each model's strengths.**
+
+| Model | Strengths | Best For |
+|-------|-----------|----------|
+| Claude | General tasks, planning, coding | Implementation, architecture |
+| Codex | Diligent, strong reasoning | Code review, bug investigation |
+
+- After Claude completes a development phase → have Codex review the changes
+- When Claude hits a deep bug → dispatch Codex + Opus subagent in parallel to review, then summarize both results
+
 for environment export, Use 'conda env export -- froth-history' to export top-level dependencies, and 'pip' to export them separately using 'pip freeze'. Both should be installed in separate files and layers (conda first, then 'pip'), and should not be mixed in one 'env'
 
 For complex development, it should be split into relatively independent phases, and testing and verification methods should be defined for each phase. Execute the plan step by step, and enter the next phase only after the test passes.
