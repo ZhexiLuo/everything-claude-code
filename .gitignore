@@ -52,3 +52,6 @@ statsig/
 telemetry/
 settings.local.json
 .update.lock
+
+# Agent generated files
+agent/
