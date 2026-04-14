@@ -186,3 +186,6 @@ def main(cfg: DictConfig) -> None:
 ## robotics toolkit
 - `coacd`: Convex decomposition library
 - `urdf2mjcf`: assests format conversion
+
+## network proxy troubleshooting
+- If the agent encounters network proxy issues (e.g., connection timeout, proxy error) when executing commands, it is caused by the proxy configured in `.claude/settings`. Simply prepend `unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY` before the command to fix it. **NEVER modify `.claude/settings` to remove the proxy configuration.**
