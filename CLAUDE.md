@@ -22,6 +22,11 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 - Simple, explicit, modular code is better than clever or defensive overengineering.
 - After development or debugging, proactively tell the user where to inspect the result, using an absolute path when possible, and ask the user to confirm whether the task is actually complete.
 
+**End-to-end task completion: Always run verification automatically after code changes, then deliver detailed results for user review.**
+- After modifying code, run it immediately to confirm no errors and the output matches expectations. Provide the user with the actual output content or the absolute path to output files.
+- If the change involves visualization or has helper scripts for visual inspection, either provide the visualization command for the user to run or directly report the absolute path to the generated visualization files.
+- Do not consider a task complete until verification passes. Present a clear summary: what was changed, what was verified, and where to inspect the results.
+
 Any general requirement exceeding 10 lines may be simplified by the encapsulated interface, remember don't make thing complex
 
 - Do not run git add & git commit when I haven't explicitly requested it
