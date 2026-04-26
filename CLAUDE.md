@@ -121,10 +121,13 @@ Don't execute `git commit` at detached HEAD
 
 - Name the file in lowercase
 
-**after development, call review skills/plugins automaticly, rethinking seceral questions, and keep improving until it is good enough**
-- Have I met the user's requirements? Can this requirement be fulfilled more simply
-- Did I make the mistake of reinventing the wheel? Can the partial implementation reuse the existing code or merge it？
-- Whether my modifications are consistent with the style of the existing code and comply with the project specifications
+**after development, mandatory code review with omc:**
+- After completing any task that involves writing 20+ lines of code, you MUST run `omc review` to inspect the changes
+- If the omc plugin is not installed, fallback to using the `code-reviewer` subagent for review
+- After review, rethink the following three aspects and keep improving until good enough:
+  - Does the implementation fully satisfy the user's intent?
+  - Are there any bugs, errors, or edge cases in the code?
+  - Can the code be more elegant, concise, and maintainable?
 
 **When you need to study the structure of large datasets, usually a folder contains thousands of files. Directly listing all the files will cause your context to explode, so you should:**
 - top-down to understand the structure of datasets.
