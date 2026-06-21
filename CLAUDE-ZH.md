@@ -16,6 +16,11 @@
   - 例如：聊天："zhexi 你好！🚀" | 代码注释：`# Initialize weights` | Git：`✨ feat: add user login`
 - 先写代码，再写注释。只有在所有函数都实现完毕后，才补充简洁、必要的英文注释
 
+## skills
+- 对于复杂编码任务，使用 superpowers
+- 对于长程任务, 使用 planning-with-files
+- 对于代码审阅，使用 linus-review-skills 验证代码是否符合 linus 审美
+
 ## 核心工作流
 
 **绝不直接开始执行。每个非平凡任务都必须遵循以下 5 步流程：**
@@ -111,19 +116,21 @@
 | Claude | 通用任务、规划、编码 | 实现、架构 |
 | Codex | 勤勉、推理能力强 | 代码评审、bug 调查 |
 
-强制工作流
+用户喜好的工作流:
+如果你是 claude:
 - Claude 完成一个开发阶段后 → 让 Codex 评审改动
-- Claude 遇到深层 bug 时 → 并行派出 Codex + Opus subagent，然后汇总两者结果
+- Claude 遇到深层 bug 时 → 并行派出 Codex + Opus subagent，然后汇总两者结果 -> 主 agent 批判性地看待 subagent回复，并执行修复
+如果你是 codex:
+- 和用户交流，并进行详细计划 -> 调用 claude 完成代码修改 -> 查看代码修改是否正确，简洁，如不符合要求，在相同上下文中调用 claude 继续修改 -> 验证修改正确性
 
 ## 项目结构
 
 **Agent 目录：** 每个项目都必须有一个 `/agent` 目录存放 agent 生成的文档：
 - `agent/out/`：命令输出（可视化、日志、结果）
 - `agent/doc/plan/`：开发与调试方案
-- `agent/doc/todo/`：简短的用户 TODO 计划
 - `agent/doc/bug-fix/`：bug 修复文档
 - `agent/log/`：重定向的终端输出（用 `python -u` 关闭块缓冲）
-- `agent/history/`：开发与 bug 修复历史总结（`history.md`、`bug-fix.md`）
+- `agent/scripts`： 可复用的脚本(如果是一次性的，用完立刻删除)
 - `agent/test/`：测试文件
 
 - 保持 agent 文档简短：只放最重要的信息（项目结构、环境、命令、顶层设计）

@@ -16,6 +16,12 @@
   - eg., Chat: "zhexi 你好！🚀" | Code comment: `# Initialize weights` | Git: `✨ feat: add user login`
 - Write code first, then comments. Only add concise, necessary English comments after all functions are implemented
 
+## Skills
+
+- For complex coding tasks, use `superpowers`
+- For long-horizon tasks, use `planning-with-files`
+- For code review, use `linus-review-skills` to verify the code matches Linus's aesthetic
+
 ## Core Workflow
 
 **Never start execution directly. Every non-trivial task MUST follow this 5-step pipeline:**
@@ -50,7 +56,7 @@ Present a summary: what was changed, what was verified, where to inspect results
 - Prefer the minimum implementation that directly solves the problem. Don't overdesign.
 - **No speculative branching:** do not add `if-else`, `try-except`, fallback paths, or pre-emptive guards unless the failure has already been observed or is contractually necessary. If you catch yourself writing "just in case" — delete it.
 - Fast-fail, expose the raw error, keep the real signal visible for debugging.
-- Modularize early: any function longer than 50 lines is a refactor candidate. Any general requirement exceeding 10 lines should be simplified by an encapsulated interface.
+- Modularize early: any function longer than 50 lines is a refactor candidate. Any general requirement exceeding 10 lines should be simplified by an encapsulated interface. Any single file exceeding 200 lines is reason enough to split it.
 - Prefer good data flow and clear boundaries over patching symptoms everywhere.
 - Simple, explicit, modular code > clever or defensive overengineering.
 - After a bug is fixed, review all attempted edits and keep only the minimum change that solved it.
@@ -111,18 +117,23 @@ Two-step process: **first correctness, then quality.**
 | Claude | General tasks, planning, coding | Implementation, architecture |
 | Codex | Diligent, strong reasoning | Code review, bug investigation |
 
+**User-preferred workflow:**
+
+If you are Claude:
 - After Claude completes a development phase → have Codex review the changes
-- When Claude hits a deep bug → dispatch Codex + Opus subagent in parallel, then summarize both results
+- When Claude hits a deep bug → dispatch Codex + Opus subagent in parallel, summarize both results → the main agent critically evaluates the subagents' replies and executes the fix
+
+If you are Codex:
+- Discuss with the user and produce a detailed plan → call Claude to make the code changes → check whether the changes are correct and concise; if not up to standard, call Claude again in the same context to keep modifying → verify correctness
 
 ## Project Structure
 
 **Agent directory:** every project must have an `/agent` dir for agent-generated documents:
 - `agent/out/`: command output (visualization, logs, results)
 - `agent/doc/plan/`: development and debug plans
-- `agent/doc/todo/`: brief user TODO plans
 - `agent/doc/bug-fix/`: bug fix documentation
 - `agent/log/`: redirected terminal output (use `python -u` to disable block buffering)
-- `agent/history/`: development and bug-fix history summaries (`history.md`, `bug-fix.md`)
+- `agent/scripts/`: reusable scripts (delete immediately after use if one-off)
 - `agent/test/`: test files
 
 - Keep agent documentation short: only the most important info (project structure, environment, commands, top-level design)
