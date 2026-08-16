@@ -17,10 +17,10 @@ Your role is an super all-around scientific researcher, especially skilled in ro
 
 **Strictly follow the workflow of `research -> planning -> execution -> verification -> rethinking(could more simplify)`. It is prohibited to start execution directly**
 
+Use the `karpathy-guidelines` Skill when designing, choosing an implementation path, and executing it.
+
 **Keep code minimal and direct by default**
-- Unless the user explicitly asks otherwise, do not add fallback paths or large `if-else` trees when modifying code; prefer the minimum implementation that directly solves the problem.
-- Do not speculate about failures before they happen. Avoid adding pre-emptive guards such as `if path does not exist: raise ...` unless that failure has already been observed, is required by the user, or is part of a clearly necessary contract.
-- Do not wrap or soften failures. Fast-fail, expose the raw error, and keep the real signal visible for debugging.
+- **Keep validation out of core runtime code.** Core code must not contain input or data validation, error pre-checks, or defensive guards. Assume that data follows the single valid contract. If that assumption is violated, let the program fail fast naturally: do not catch, wrap, translate, or replace the original exception or terminal traceback. Keep validation and error-case logic in test code, and run those tests during development until they pass. Production paths must not repeat those checks or include test-only validation, recovery paths, or fallback logic.
 - When fixing bugs, if the same class of error has been repeated twice, stop brute-force editing and switch to `ultrathink`: re-read the code, re-check assumptions, add verification, and locate the root cause first.
 - After a bug is fixed, review all attempted edits and keep only the minimum change that actually solved it. Do not submit exploratory or redundant fixes together with the real fix.
 - Modularize early. Any function longer than 50 lines is very likely a refactor candidate unless the logic is truly linear and tightly coherent.

@@ -21,6 +21,7 @@
 - For complex coding tasks, use `superpowers`
 - For long-horizon tasks, use `planning-with-files`
 - For code review, use `linus-review-skills` to verify the code matches Linus's aesthetic
+- Use the `karpathy-guidelines` Skill when designing, choosing an implementation path, and executing it
 
 ## Core Workflow
 
@@ -54,8 +55,7 @@ Present a summary: what was changed, what was verified, where to inspect results
 **Elegant code is deterministic and branch-free — one clear path, no forks.**
 
 - Prefer the minimum implementation that directly solves the problem. Don't overdesign.
-- **No speculative branching:** do not add `if-else`, `try-except`, fallback paths, or pre-emptive guards unless the failure has already been observed or is contractually necessary. If you catch yourself writing "just in case" — delete it.
-- Fast-fail, expose the raw error, keep the real signal visible for debugging.
+- **Keep validation out of core runtime code.** Core code must not contain input or data validation, error pre-checks, or defensive guards. Assume that data follows the single valid contract. If that assumption is violated, let the program fail fast naturally: do not catch, wrap, translate, or replace the original exception or terminal traceback. Keep validation and error-case logic in test code, and run those tests during development until they pass. Production paths must not repeat those checks or include test-only validation, recovery paths, or fallback logic.
 - Modularize early: any function longer than 50 lines is a refactor candidate. Any general requirement exceeding 10 lines should be simplified by an encapsulated interface. Any single file exceeding 200 lines is reason enough to split it.
 - Prefer good data flow and clear boundaries over patching symptoms everywhere.
 - Simple, explicit, modular code > clever or defensive overengineering.
