@@ -1,0 +1,4 @@
+interface:
+  display_name: "Presenting Your Research"
+  short_description: "Design clear research pages with concrete visual examples"
+  default_prompt: "Use $presenting-your-research to turn my paper, results, and demos into a clear project page with purposeful figures and videos."

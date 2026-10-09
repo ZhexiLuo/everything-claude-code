@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Presenting Your Research 的完整中文阅读版：讲座原则、项目案例与视觉制作工作流。">
+  <title>Presenting Your Research · 中文阅读版</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#reading">跳到正文</a>
+  <div class="page">
+    <header class="masthead" id="top">
+      <p class="eyebrow">科研表达 · 个人技能手册</p>
+      <h1>Presenting<br>Your Research</h1>
+      <p class="lead">让读者看见你的研究解决了什么问题，理解它为何成立，并找到支持结论的证据。</p>
+      <div class="edition">
+        <span>中文完整阅读版</span>
+        <code>$presenting-your-research</code>
+      </div>
+      <p class="edition-note">本页完整翻译英文技能正文及全部参考文档，保留约束、示例、来源与媒体。实际调用的权威版本是<a href="../../SKILL.md">英文 SKILL.md</a>；中文 Markdown 与本页同步保留，便于对照和维护。</p>
+    </header>
+    <div class="reading-layout">
+      <aside class="contents">
+        <nav aria-label="章节导航">
+          <p class="nav-title">阅读顺序</p>
+          <ol><li><a href="#skill"><span class="number">01</span>技能使用指南</a></li><li><a href="#lecture-principles"><span class="number">02</span>讲座原则</a></li><li><a href="#project-cases"><span class="number">03</span>UMI 与 TT 案例</a></li><li><a href="#visual-production"><span class="number">04</span>视觉制作</a></li><li><a href="#media-sources"><span class="number">05</span>媒体与来源</a></li></ol>
+        </nav>
+        <p class="nav-note">先掌握表达原则，再读具体案例，最后进入制作流程。每章均可对照英文原文。</p>
+      </aside>
+      <main id="reading" tabindex="-1">
+        <section class="chapter" id="skill"><p class="chapter-kicker">01 / 技能使用指南</p><article class="document"><p class="source-links"><a href="skill.md">中文 Markdown</a><a href="../../SKILL.md">英文原文 ↗</a></p><h2 id="skill-presenting-your-research">Presenting Your Research</h2>
+<p><strong>技能名称：</strong> <code>presenting-your-research</code></p>
+<p><strong>适用场景（英文元数据的完整译文）：</strong> 以具体的叙事、布局、图示和视频决策，设计或改进科研项目页；依据 Huy Ha 的科研表达讲座和机器人研究的实际案例。适用于将论文与演示转化为易读的项目页、诊断难以理解的页面段落，以及规划配套图示、视频片段或演讲。</p>
+<p>帮助读者理解一项研究贡献，看清每个设计选择为什么必要，并找到支持它的证据。优先服务于项目页；用户提出要求时，将同样的推理方式用于配套图示、演示视频和报告。</p>
+<p>本技能提炼了 Huy Ha 的<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf">讲座</a>以及多人合作研究的项目页。参考文档明确区分讲座建议、从案例中观察到的做法，以及我们为实际工作归纳的改编。把案例视为设计证据，不要据此断言每个视觉决策都由某一个人作出。</p>
+<h3 id="skill-从用户要求的范围开始">从用户要求的范围开始</h3>
+<p>新建页面或进行大幅改版时，先检查论文、实际结果、可用图片与视频片段、现有页面，以及可编辑源文件。明确以下事项：</p>
+<ul>
+<li><strong>读者：</strong> 他们已经知道什么、关心什么，有多少时间理解这项研究？</li>
+<li><strong>贡献：</strong> 方法能做什么，适用于哪种任务或场景？</li>
+<li><strong>证据：</strong> 哪个真实结果、比较或机制可以解释每个论断？</li>
+<li><strong>材料：</strong> 已有哪些视觉材料，哪些仍需要制作？</li>
+</ul>
+<p>使用已提供的上下文，不要让用户重复说明。只有当缺失的信息会改变科学表达或必要的制作工作时，才向用户提问。某项材料缺失时，让规划中的位置明显保持未填充状态；不要编造结果、比较、轨迹或图示。</p>
+<p>局部修订时，检查受影响的章节及其相邻内容。解决该处的阅读问题，无需重建整页，也无需重新陈述所有原则。</p>
+<h3 id="skill-1-先让研究易于理解再处理样式">1. 先让研究易于理解，再处理样式</h3>
+<p>完整页面先拟一份紧凑的章节映射：</p>
+<table>
+<thead>
+<tr>
+<th>读者的问题</th>
+<th>核心结论</th>
+<th>证据</th>
+<th>视觉处理</th>
+<th>下一个问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现有的操作策略能在移动机器人上运行吗？</td>
+<td>系统把夹爪策略接入全身控制器。</td>
+<td>已核实的部署视频。</td>
+<td>清楚展示任务和机器人，并补充一句图注。</td>
+<td>什么让机器人的腿跟随夹爪？</td>
+</tr>
+<tr>
+<td>身体运动时，夹爪为什么仍然稳定？</td>
+<td>控制器在世界坐标系中进行补偿。</td>
+<td>扰动视频及相关控制器说明。</td>
+<td>一致地标明身体运动与夹爪目标。</td>
+<td>它如何预判快速运动？</td>
+</tr>
+</tbody>
+</table>
+<p>这些行是依据 UMI on Legs 作出的改编，不是固定的页面模板。根据读者仍然需要理解的内容，写出下一个问题。一句简洁的过渡，有时比增加一个装饰性段落更有价值。</p>
+<p>为新机制命名前，先建立其必要性。例如，先解释移动机器人必须迅速估计身体运动，才能保持夹爪稳定，再引入里程计模块。遇到读者不熟悉的定义时，在引入术语之前，先给出可观察的例子与反例。</p>
+<p>只有证据支持时，才使用结论式标题。将“实验”这样的空泛标题替换成具体发现；介绍尚未解决的需求时，也可以用一个诚实的问题作为标题。保留作者的技术术语与贡献边界。</p>
+<p>有关这些做法的理由和更多修改前后示例，请阅读<a href="#lecture-principles">讲座原则</a>。</p>
+<h3 id="skill-2-支持不同阅读速度">2. 支持不同阅读速度</h3>
+<p>建立清楚的入口：项目身份、一到两句能力说明、最能揭示研究的视觉材料，以及便于访问的论文和代码链接。根据研究本身、可用视频素材和实际观看尺寸，决定首屏更需要沉浸式演示，还是解释性图示。全屏视频是可选项。</p>
+<p>让每一层承担不同职责：</p>
+<ul>
+<li><strong>标题：</strong> 提出问题或陈述结论。</li>
+<li><strong>图片／视频：</strong> 让行为或关系变得可见。</li>
+<li><strong>图注：</strong> 解释应当注意什么，以及它说明了什么。</li>
+<li><strong>正文：</strong> 解释必要的机制、条件或限定。</li>
+<li><strong>问答、局限、论文、代码：</strong> 服务于想进一步了解的读者。</li>
+</ul>
+<p>例如，Transformer Transformer 的 token 图展示结构；图注解释两种 token 颜色各自代表的角色；正文则解释这种表示的设计目标。图注应当支持一次有用的快速阅读，而不是重复正文。</p>
+<p>页面段落应当围绕单一重点。推导、穷尽的设置细节和长篇讨论如果妨碍叙事，就移到论文或更深入的章节。不要隐藏理解当前证据所需的比较条件或限定说明。</p>
+<p>阅读<a href="#project-cases">项目案例</a>，查看实际的章节过渡、图示、截图和视频。将其中材料作为设计参考时，打开相应图片或观看有关视频片段；文件名本身无法教会你构图或节奏。</p>
+<h3 id="skill-3-给每个视觉材料安排具体的表达任务">3. 给每个视觉材料安排具体的表达任务</h3>
+<p>根据需要传达的信息选择视觉形式：</p>
+<table>
+<thead>
+<tr>
+<th>要传达的信息</th>
+<th>有用的视觉形式</th>
+<th>具体指令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可观察的能力</td>
+<td>清楚的任务视频</td>
+<td>保持操作物体和结果可见；用图注说明应当观察的行为。</td>
+</tr>
+<tr>
+<td>某种机制为何有用</td>
+<td>条件匹配的比较或消融</td>
+<td>对齐任务、相机、阶段和标签；明确改变了哪项条件。</td>
+</tr>
+<tr>
+<td>表示或架构</td>
+<td>图示</td>
+<td>先建立整体流程，再标明对象与关系；复用语义颜色。</td>
+</tr>
+<tr>
+<td>性能或扩展趋势</td>
+<td>图表</td>
+<td>写明指标和比较对象；在页面的实际宽度下，让相关趋势清楚可读。</td>
+</tr>
+<tr>
+<td>同一种能力的多个实例</td>
+<td>克制的网格或可选择示例</td>
+<td>保持构图一致；如果同时运动会争夺注意力，就让读者控制查看内容。</td>
+</tr>
+</tbody>
+</table>
+<p>采用克制的视觉层次：研究视觉材料最突出，标题清楚可读，图注次之，细节更安静。用留白分开不同概念步骤。在实际布局中检查对齐与行长。相关图示中，同一种颜色始终对应同一概念；参考配色的语义不同，就不要直接照搬。</p>
+<p>解释一个过程时，随着介绍逐步揭示当前对象或步骤。演讲中，让内容出现的时刻与口述关键词同步。可滚动页面则应允许读者暂停、重播和检查；不要让读者必须等待一段电影式动画结束，才能接触到解释。</p>
+<p>将视频作为科学证据时，采用固定、完整、连续的视角。宣传视频可以使用镜头运动和精选片段，但必须清楚说明其用途和播放速度。某个论断需要相应证据时，另外提供合适的证据；项目页可以同时包含这两类视频。</p>
+<p>阅读<a href="#visual-production">视觉制作</a>，了解构图、灯光、图示与图注配方、导入工具，以及完整案例。项目现有的渲染器或可编辑制作流程适用时，优先复用。Blender 是可选的制作路径，并不意味着必须替换已经能够工作的管线。</p>
+<h3 id="skill-4-制作用户要求的成果">4. 制作用户要求的成果</h3>
+<p>完整项目页任务从章节映射进入文案和媒体计划，再构建已获授权的本地页面。图示、视频或报告任务则应制作相应成果及必要的可编辑源文件。使用项目已有约定和相关制作工具。</p>
+<p>输出规模应与任务相称：局部修订只需要修好的章节及解释，不必强制提供完整分镜。简报与章节映射是工作工具；任务完成意味着用户要求的成果已经存在，并且已经检查。</p>
+<h3 id="skill-5-检查读者实际收到的内容">5. 检查读者实际收到的内容</h3>
+<p>检查渲染后的输出，不要只看源文件或构建成功状态：</p>
+<ul>
+<li><strong>快速阅读：</strong> 读者能从入口和章节标题中识别研究贡献吗？</li>
+<li><strong>连续阅读：</strong> 三个相邻章节能组成易于理解的递进吗？每个新机制是否先交代了引入它的理由？</li>
+<li><strong>证据：</strong> 每个重要论断是否指向正确的比较、结果或解释性视觉材料？仿真、真实数据、播放速度、剪辑素材会影响理解时，是否已说明？</li>
+<li><strong>视觉：</strong> 桌面和窄屏／移动端宽度下，标签、对象、图例和图注是否可读？语义颜色是否一致？</li>
+<li><strong>媒体：</strong> 图片能加载、视频能播放吗？读者能暂停或重播相关运动吗？检查有代表性的帧、比较阶段与过渡，无需检查每一帧。</li>
+<li><strong>来源：</strong> 原始链接和可编辑输出是否仍可用？保留参考截图的来源归属；默认情况下，它们是学习材料，不是用户的实验，也不是可任意复用的美术资产。</li>
+</ul>
+<p>如果页面好看但令人困惑，先定位缺失的问题、解释或证据，再添加效果。如果表达清楚但视觉偏弱，就修正具体的构图、尺度、对齐、对比或灯光问题。报告修改的文件、实际检查过的内容，以及仍存在的材料限制。</p>
+<h3 id="skill-参考文档与阅读版本">参考文档与阅读版本</h3>
+<ul>
+<li><a href="#lecture-principles">讲座原则</a>：读者、信息级联、逆向教学与注意力，附原始讲座页码。</li>
+<li><a href="#project-cases">项目案例</a>：UMI on Legs、Transformer Transformer，以及较小的对照案例。</li>
+<li><a href="#visual-production">视觉制作</a>：具体的图示、相机、灯光和动画配方。</li>
+<li><a href="#media-sources">媒体来源</a>：<code>image/</code> 中材料的原始 URL、截图位置、转换过程与学习用途归属。</li>
+<li><a href="index.html">中文阅读版</a>：供人类审阅的完整译文；实际运行的技能使用英文文件。</li>
+</ul></article></section>
+<section class="chapter" id="lecture-principles"><p class="chapter-kicker">02 / 讲座原则</p><article class="document"><p class="source-links"><a href="lecture-principles.md">中文 Markdown</a><a href="../../references/lecture-principles.md">英文原文 ↗</a></p><h2 id="lecture-principles-把讲座原则变成可执行的做法">把讲座原则变成可执行的做法</h2>
+<p>用这份参考文档修正难以理解的解释。引文采用 Huy Ha 的 103 页<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf">讲座</a>中<strong>从 1 开始计数的 PDF 页码</strong>。编号原则概括讲座明确提出的建议；练习与具体措辞是我们的改编。</p>
+<h3 id="lecture-principles-来源事实讲座实际教了什么">来源事实：讲座实际教了什么</h3>
+<ol>
+<li><strong>读者：</strong> 考虑读者已有的知识、兴趣，以及愿意投入多少精力来理解内容（<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=25">第 25–28 页</a>）。</li>
+<li><strong>信息级联（information cascade）：</strong> 社交媒体帖子、视频、网站、演讲、论文和代码分别服务于投入程度逐步增加的读者；网站既需要简短结论，也需要更深入的回答（<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=32">第 32–40 页</a>）。</li>
+<li><strong>逆向教学（backward teaching）：</strong> 先给具体例子与反例，再给定义；先建立问题或展示结果，再讲解决方案（<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=44">第 44–50 页</a>）。</li>
+<li><strong>标题与注意力：</strong> 信息明确的标题帮助读者重新进入内容；简单的逐步呈现应与口述关键词同步（<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=51">第 51–54 页</a>、<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=63">第 63–72 页</a>）。</li>
+<li><strong>视觉用途：</strong> 科学视频保留客观、完整、连续的观察；宣传视频则可以采用电影式的片段选择（<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=75">第 75–77 页</a>）。</li>
+<li><strong>制作：</strong> 变化景别与相机运动；使用柔和照明、轮廓光和补光；借助已有工具把仿真导入 Blender（<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=80">第 80–92 页</a>、<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=99">第 99–101 页</a>）。</li>
+</ol>
+<h3 id="lecture-principles-读者约定示例灵巧手项目页">读者约定示例：灵巧手项目页</h3>
+<p><strong>这是一个假设练习，不是实验报告。</strong> 假设一位研究者想制作一个项目页，介绍如何把人类操作演示迁移到机器人手上。项目应当有自己的实际结果；本练习不编造成功率、比较结果或经过验证的机制。</p>
+<p>润色引言前，先写出三项决策：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>需要检验的具体假设</th>
+<th>对页面的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>知识</td>
+<td>机器人领域的访客理解演示和策略，但可能不了解项目的接触表示。</td>
+<td>引入表示符号前，先展示被操作物体和手的运动。</td>
+</tr>
+<tr>
+<td>兴趣</td>
+<td>访客想知道，面对不同的手，哪些内容仍能迁移。</td>
+<td>在第一个能力展示旁边呈现人类与机器人的对应关系。</td>
+</tr>
+<tr>
+<td>投入</td>
+<td>普通访客可能只浏览；潜在合作者则可能检查机制。</td>
+<td>让简短说明独立成立，再链接到表示与评估的细节。</td>
+</tr>
+</tbody>
+</table>
+<p>这是一份拟定的读者约定，不是适用于所有人的群体画像。面向专家的报告或大众演示应调整这些假设。</p>
+<p><strong>虚构的模块优先草稿：</strong> “我们的管线包括重建、重定向和跟踪策略。”</p>
+<p><strong>从问题出发的改编：</strong> “人类与机器人的手在几何结构上不同。因此，演示需要转化为机器人能够执行的运动，同时保留操作意图。”</p>
+<p>第二个版本让模块有了具体职责。接下来展示作者提供的真实示例。一个有用的反例可以是真实录制的情形：虽然匹配了可见的手部运动，却没有保留预期的物体交互。先让读者看见必须保留什么，再命名相关表示。如果缺少这段记录，就把它保留为拟议实验；不要制作一张假的失败图片。</p>
+<h3 id="lecture-principles-把信息级联落实到不同成果">把信息级联落实到不同成果</h3>
+<p>对于同一个假设项目，根据每种成果应支持的判断分配信息：</p>
+<table>
+<thead>
+<tr>
+<th>成果</th>
+<th>拟定内容</th>
+<th>读者可以判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入口视觉与摘要</td>
+<td>在一个清楚的构图中呈现源演示、目标机器人和预期迁移。</td>
+<td>它是否回应了自己的操作问题。</td>
+</tr>
+<tr>
+<td>三个相邻的页面章节</td>
+<td>形态差异、转换机制，以及对应证据。</td>
+<td>该机制为什么应当出现在系统中。</td>
+</tr>
+<tr>
+<td>技术视频或报告</td>
+<td>解释一个机制，同时展示其运动或图示。</td>
+<td>自己是否理解行为产生的原因。</td>
+</tr>
+<tr>
+<td>论文与补充证据</td>
+<td>定义、条件、比较、实验流程和完整记录。</td>
+<td>论断是否获得充分支持。</td>
+</tr>
+<tr>
+<td>代码与可编辑源文件</td>
+<td>入口、数据契约、配置和原始视觉材料。</td>
+<td>自己能否复现或扩展这项工作。</td>
+</tr>
+</tbody>
+</table>
+<p>不要只是把同一段话缩短五次。每一层应选择不同的信息任务。页面的机制解释可以省略推导，但仍须保留理解证据所需的比较条件。</p>
+<h3 id="lecture-principles-写因果段落而不是组件清单">写因果段落，而不是组件清单</h3>
+<p>用<strong>问题 → 论断 → 证据 → 解释 → 下一个问题</strong>辅助写作。这一顺序是我们归纳的执行方法，不是讲座中的原句或固定公式。</p>
+<p>对于拟写的迁移段落：</p>
+<ul>
+<li><strong>问题：</strong> 人类操作的哪些性质应该在迁移后保留下来？</li>
+<li><strong>论断：</strong> 写出作者实际给出的答案，并把范围收窄到可以检验的程度。</li>
+<li><strong>证据：</strong> 放入能够支持该答案的记录、图示或比较。</li>
+<li><strong>解释：</strong> 指出哪个视觉特征让这种关系变得可见。</li>
+<li><strong>下一个问题：</strong> 明确了预期交互之后，机器人如何执行它？</li>
+</ul>
+<p>把这个顺序用于组织正文，不要在成品页面上强制露出五个标签。例如：“这种表示规定了需要保留的交互。下一步是生成机器人能够执行的运动。”这句过渡说明了为什么需要下一节。</p>
+<p><strong>标题改编：</strong> 介绍机制时，将“重定向模块”改为“机器人应如何实现演示中的交互？”只有项目证据支持更强的结论时，才使用“机器人在不同手部几何结构下保留了交互”。标题承载论断，并非装饰。</p>
+<h3 id="lecture-principles-让内容呈现跟随解释">让内容呈现跟随解释</h3>
+<p>下面是为图示撰写的原创排练脚本，使用计划中的元素，不把它们当作已成立的结果：</p>
+<table>
+<thead>
+<tr>
+<th>口述关键词</th>
+<th>此时呈现</th>
+<th>持续保持可见</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“演示”</td>
+<td>源手和物体。</td>
+<td>物体与运动参考。</td>
+</tr>
+<tr>
+<td>“不同的几何结构”</td>
+<td>在源手旁放入目标手。</td>
+<td>两只手保持相近的视觉尺度。</td>
+</tr>
+<tr>
+<td>“交互”</td>
+<td>相关接触或物体运动标注。</td>
+<td>源与目标的比较。</td>
+</tr>
+<tr>
+<td>“执行”</td>
+<td>机器人运动，以及它与表示之间的联系。</td>
+<td>图示的整体方向。</td>
+</tr>
+</tbody>
+</table>
+<p>在说到某个元素名称时，让它出现或淡入；不要在只讲第一个角落时，就把整张图全部呈现。使用实际渲染的动画排练。网页上，若运动承担解释任务，应提供静态完成状态以及重播／暂停控制。读者应能检查某种关系，而无需等待下一轮循环。</p>
+<h3 id="lecture-principles-检查讲座中的视觉示例">检查讲座中的视觉示例</h3>
+<figure>
+  <img width="1248" height="702" src="../../image/lecture-050.png" alt="讲座 PDF 第 50 页比较了两种解释顺序" loading="lazy">
+  <figcaption>讲座第 50 页：两种解释顺序的比较。来源：<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=50">原始 PDF 第 50 页</a>。<a href="../../image/lecture-050.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<p>研究需求与技术模块分别按什么顺序出现。<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=50">原始第 50 页</a>。</p>
+<figure>
+  <img width="1248" height="702" src="../../image/lecture-067.png" alt="讲座 PDF 第 67 页在图示中突出当前正在口述的概念" loading="lazy">
+  <figcaption>讲座第 67 页：在图示中突出当前口述的概念。来源：<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=67">原始 PDF 第 67 页</a>。<a href="../../image/lecture-067.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<p>研究当前概念与已经解释过的上下文之间如何形成对比。<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=67">原始第 67 页</a>。</p>
+<figure>
+  <img width="1248" height="702" src="../../image/lecture-076.png" alt="讲座 PDF 第 76 页说明不同用途需要不同视觉处理" loading="lazy">
+  <figcaption>讲座第 76 页：不同用途需要不同的视觉处理。来源：<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=76">原始 PDF 第 76 页</a>。<a href="../../image/lecture-076.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<p>研究科学记录必须保留哪些可观察内容，再为用户要求的成果选择视觉处理方式。<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=76">原始第 76 页</a>。</p></article></section>
+<section class="chapter" id="project-cases"><p class="chapter-kicker">03 / UMI 与 TT 案例</p><article class="document"><p class="source-links"><a href="project-cases.md">中文 Markdown</a><a href="../../references/project-cases.md">英文原文 ↗</a></p><h2 id="project-cases-项目页的完整案例分析">项目页的完整案例分析</h2>
+<p>本章先记录多人合作项目页中可观察到的做法，再给出我们的改编。它们不能证明具体由谁亲自设计了视觉材料。来源链接指向准确的章节；本地截图用于视觉学习，并始终保留为注明来源的参考材料。阅读有关段落时，应同时查看对应截图或视频。</p>
+<h3 id="project-cases-umi-on-legs让每个答案带出下一个问题">UMI on Legs：让每个答案带出下一个问题</h3>
+<p><strong>观察到的原始结构。</strong> <a href="https://umi-on-legs.github.io/#umi">演示采集</a>建立便携式数据采集的动机。随后，一段过渡提出：腿部应当如何实现预测的夹爪运动？<a href="https://umi-on-legs.github.io/#task-tracking">仿真跟踪</a>明确仿真中的具体问题；<a href="https://umi-on-legs.github.io/#wbc">控制器解释</a>区分稳定性与精确性，并分别搭配演示。<a href="https://umi-on-legs.github.io/#hardware">硬件</a>让部署方式具体化，<a href="https://umi-on-legs.github.io/#qa">问答</a>则补充限定条件。<a href="https://umi-on-legs.github.io/#stable-tracking">稳定性演示</a>展示身体受到扰动时手臂的补偿。<a href="https://umi-on-legs.github.io/#precise-tracking">精确性演示</a>把未来的夹爪目标与身体的提前响应联系起来。这些视频解释控制器行为，不能替代定量评估。</p>
+<figure>
+  <img width="880" height="968" src="../../image/umi-question-chain.png" alt="UMI on Legs 原始页面中从演示采集过渡到控制器的段落" loading="lazy">
+  <figcaption>原始页面截图：从演示数据到机器人控制的过渡。来源：<a href="https://umi-on-legs.github.io/#task-tracking">UMI on Legs · Task Tracking</a>；作为注明来源的学习材料保留。<a href="../../image/umi-question-chain.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<p><strong>执行层面的改编。</strong> 借用布局前，先标注每对章节之间的边界：</p>
+<table>
+<thead>
+<tr>
+<th>边界</th>
+<th>下一段必须合理引出的问题</th>
+<th>在案例中检查什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#umi → #task-tracking</code></td>
+<td>已经有了期望的夹爪运动；什么让机器人其余部分实现它？</td>
+<td>采集数据与控制之间的过渡。</td>
+</tr>
+<tr>
+<td><code>#task-tracking → #wbc</code></td>
+<td>为了完成操作，跟踪器必须保持什么？</td>
+<td>从训练设置转向行为要求的过程。</td>
+</tr>
+<tr>
+<td><code>#wbc → #hardware</code></td>
+<td>哪些信息让控制器能用于真实机器人？</td>
+<td>行为与部署所需设备之间的联系。</td>
+</tr>
+<tr>
+<td><code>#hardware → #qa</code></td>
+<td>接口与系统假设在哪些地方不再成立？</td>
+<td>展示出的能力与其边界的区分。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>虚构的修改前版本：</strong> “接下来，我们介绍全身控制器。”</p>
+<p><strong>我们的修改后改编：</strong> “我们现在知道夹爪应该做什么。机器人的其余部分应如何运动，才能实现这一目标？”</p>
+<p>第二种过渡让控制器回应读者已经理解的需求。用于自己的项目时，应把“夹爪”替换为实际的接口变量。如果接口是一份接触时序，就展示该时序；如果接口是物体位姿轨迹，就展示物体。不要仅因为参考段落读起来顺畅，就照搬它的接口假设。</p>
+<figure>
+  <img width="1265" height="712" src="../../image/umi-wbc.png" alt="UMI on Legs 控制器章节中的稳定性演示及其解释" loading="lazy">
+  <figcaption>原始页面截图：控制器章节中的稳定性演示及其解释。来源：<a href="https://umi-on-legs.github.io/#wbc">UMI on Legs · Whole-Body Controller</a>。<a href="../../image/umi-wbc.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<figure>
+  <video controls preload="metadata" playsinline poster="../../image/umi-stability-poster.jpg">
+    <source src="../../image/umi-stability.mp4" type="video/mp4">
+  </video>
+  <figcaption>稳定性参考视频。来源：<a href="https://umi-on-legs.github.io/#stable-tracking">UMI on Legs · Stable Tracking</a>。也可<a href="../../image/umi-stability.mp4">打开本地视频</a>；下方说明是我们的观察练习。</figcaption>
+</figure>
+
+<p><a href="../../image/umi-stability.mp4">观看稳定性参考片段</a>。分别在扰动发生前和补偿过程中暂停一次。思考观众能分辨什么：身体位移、手臂响应，以及夹爪与其参考目标之间的关系。为新页面制作标注时，应标明这些可观察的量，而不是增加泛泛的“鲁棒性”徽章。相邻的精确性示例应回答另一个问题；两者若使用相同图注，就会抹掉区别。</p>
+<figure>
+  <img width="880" height="968" src="../../image/umi-precision.png" alt="UMI on Legs 相邻的精确性演示回答了另一个控制问题" loading="lazy">
+  <figcaption>原始页面截图：相邻的精确性演示回答另一个控制问题。来源：<a href="https://umi-on-legs.github.io/#precise-tracking">UMI on Legs · Precise Tracking</a>。<a href="../../image/umi-precision.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<figure>
+  <video controls preload="metadata" playsinline poster="../../image/umi-precision-poster.jpg">
+    <source src="../../image/umi-precision.mp4" type="video/mp4">
+  </video>
+  <figcaption>精确性参考视频。来源：<a href="https://umi-on-legs.github.io/#precise-tracking">UMI on Legs · Precise Tracking</a>。也可<a href="../../image/umi-precision.mp4">打开本地视频</a>；下方说明是与稳定性不同的观察练习。</figcaption>
+</figure>
+
+<p><a href="../../image/umi-precision.mp4">观看精确性参考片段</a>。比较身体的提前运动与夹爪随后的运动。这与抵抗身体扰动是不同的观察任务；应为它单独撰写图注与解释。</p>
+<p><strong>一个具体的编辑任务。</strong> 取三个相邻章节，标出它们的开头句与结尾句。重写交界处，直到每一节都给下一节提供存在的理由。先隐藏图片，朗读这些句子；再恢复图片，检查每一张是否回答了刚刚提出的问题。</p>
+<h3 id="project-cases-transformer-transformer先建立词汇再解释机制">Transformer Transformer：先建立词汇，再解释机制</h3>
+<p><strong>观察到的原始结构。</strong> 首屏把标题与动画放在一起；紧随其后的摘要给出主要的硬件结果指标。<a href="https://transformer-transformer.github.io/#framework">框架</a>展示三个步骤：示范运动、生成设计、通过控制验证设计。<a href="https://transformer-transformer.github.io/#robotokens">表示</a>用蓝色表示具身结构，用橙色表示动力学信息。<a href="https://transformer-transformer.github.io/#architecture">架构</a>先解释条件信息，<a href="https://transformer-transformer.github.io/#self-guidance">自引导</a>随后解释如何用奖励引导生成。<a href="https://transformer-transformer.github.io/#results">结果</a>接着引向<a href="https://transformer-transformer.github.io/#real-world">硬件证据</a>与<a href="https://transformer-transformer.github.io/#limitations">局限</a>。表示图、图注和正文提供逐层加深的解释，而不是一份没有层次的规格说明。</p>
+<figure>
+  <img width="1265" height="712" src="../../image/tt-hero.png" alt="Transformer Transformer 的入口首屏由标题与动画占据" loading="lazy">
+  <figcaption>原始页面截图：标题与动画构成入口首屏。来源：<a href="https://transformer-transformer.github.io/">Transformer Transformer · 项目入口</a>。<a href="../../image/tt-hero.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<figure>
+  <video controls preload="metadata" playsinline poster="../../image/tt-hero-poster.jpg">
+    <source src="../../image/tt-hero.mp4" type="video/mp4">
+  </video>
+  <figcaption>原始入口动画，用于研究注意力与视觉身份。来源：<a href="https://transformer-transformer.github.io/">Transformer Transformer · 项目入口</a>。也可<a href="../../image/tt-hero.mp4">打开本地视频</a>。</figcaption>
+</figure>
+
+<p><a href="../../image/tt-hero.mp4">观看入口动画</a>。这是一份研究注意力与视觉身份的有用材料，但不意味着每个项目都该把指标放进全屏首屏。为自己的页面作决策时，应判断动画是在澄清研究问题，还是只是推迟解释。让后续摘要便于访问，并确保摘要的论断能够追溯到页面下方的证据。</p>
+<figure>
+  <img width="1265" height="712" src="../../image/tt-framework.png" alt="Transformer Transformer 的三步框架先交代整体任务，再进入内部机制" loading="lazy">
+  <figcaption>原始页面截图：三步框架先说明整体任务，再介绍内部机制。来源：<a href="https://transformer-transformer.github.io/#framework">Transformer Transformer · Framework</a>。<a href="../../image/tt-framework.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<p><strong>框架改编。</strong> 润色复杂的架构图之前，先画三个空框，分别表示输入、转换和验证。填入实际对象，不要只填模块缩写。每个框下写出对应的读者问题：</p>
+<ol>
+<li>我需要提供什么？</li>
+<li>方法会产出什么？</li>
+<li>我们如何判断产出有效？</li>
+</ol>
+<p>如果第三个框只是重复一张生成的图像，验证关系仍然缺失。框架应当说明输出如何被评估，即使详细评估放在另一节。</p>
+<figure>
+  <img width="1265" height="712" src="../../image/tt-robotokens.png" alt="Transformer Transformer 用两组 token 为读者建立理解后续机制所需的词汇" loading="lazy">
+  <figcaption>原始页面截图：两组 token 为后续解释建立词汇与颜色语义。来源：<a href="https://transformer-transformer.github.io/#robotokens">Transformer Transformer · RoboTokens</a>。<a href="../../image/tt-robotokens.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<p><strong>颜色改编。</strong> 在自己的项目内保持颜色含义一致。例如，只有图示确实区分机器人描述与变化的状态／动作信息时，才为它们分别安排一种颜色。同时添加文字标签。在架构图、逐步呈现的动画与图注中复用这些含义。同一个概念在不同章节中换色，会迫使读者重新学习词汇。</p>
+<p><strong>虚构的修改前版本：</strong> “我们的网络采用掩码扩散和基于梯度的奖励引导。”</p>
+<p><strong>我们的修改后改编：</strong> “先展示哪些信息已经给定、哪些必须生成，再解释如何把生成的候选方案引向所要求的目标。”</p>
+<p>这是一份解释计划，不是用于替换技术正文的文字。最终段落应写明项目真实的条件规则与目标。表示章节必须让名词变得可识别；架构章节必须解释操作；随后，优化章节才有基础解释如何引导该操作。</p>
+<figure>
+  <img width="1265" height="712" src="../../image/tt-results.png" alt="Transformer Transformer 在方法解释之后展示结果，建立独立的证据层" loading="lazy">
+  <figcaption>原始页面截图：结果出现在方法解释之后，构成独立的证据层。来源：<a href="https://transformer-transformer.github.io/#results">Transformer Transformer · Results</a>。<a href="../../image/tt-results.png">查看原尺寸</a>。</figcaption>
+</figure>
+
+<p><strong>结果改编。</strong> 为每个连接准备一句话：方法 → 比较、比较 → 真实机器人测试、真实机器人测试 → 边界。一种有用的写法是：“比较检验所提出的操作在这些条件下是否有帮助；硬件测试检验这种收益在部署后是否仍然存在；局限说明哪些假设仍需成立。”将这些泛称替换为真实条件与发现。不要用精选的成功片段代替结果分布。</p>
+<h3 id="project-cases-较小的交叉检查区分共同逻辑与单页风格">较小的交叉检查：区分共同逻辑与单页风格</h3>
+<p><strong>观察：</strong> <a href="https://huy-ha.github.io/scalingup/">Scaling Up</a>把简短的能力说明与视觉材料放在一起；末尾问答中关于彩色线条的问题说明了策略轨迹的含义。<strong>改编：</strong> 视觉材料有吸引力却令人陌生时，补充一句解释以及更深入说明的链接。读者无法解读的装饰性轨迹，并没有解释方法。</p>
+<p><strong>观察：</strong> <a href="https://umi-gripper.github.io/">原始 UMI 页面</a>把人类演示与自主执行放在一起，并在后面通过配对条件组织任务示例。<strong>改编：</strong> 让两个画面回应同一个视觉问题。比较人类与机器人时，保持物体和任务阶段可识别；进行消融时，写明改变的条件。与赋予比较一个具体任务相比，沿用配色或圆角视频边框，是更弱的可迁移经验。</p>
+<p>迁移因果解释与证据关系；根据实际项目选择动画、配色、语气和章节数量。</p></article></section>
+<section class="chapter" id="visual-production"><p class="chapter-kicker">04 / 视觉制作</p><article class="document"><p class="source-links"><a href="visual-production.md">中文 Markdown</a><a href="../../references/visual-production.md">英文原文 ↗</a></p><h2 id="visual-production-具体的视觉制作配方">具体的视觉制作配方</h2>
+<p>这些配方是我们给出的执行建议。其讲座依据已在<a href="#lecture-principles">讲座原则</a>中索引：<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=75">视觉用途，第 75–77 页</a>、<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=80">镜头，第 80–90 页</a>、<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=91">灯光，第 91–92 页</a>，以及<a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=99">导入工具，第 99–101 页</a>。选择某个配方，应当因为它能解决表达问题，而不是因为它能增加制作复杂度。</p>
+<h3 id="visual-production-配方-1用三种相机职责解释一次操作">配方 1：用三种相机职责解释一次操作</h3>
+<p><strong>假设的制作计划：</strong> 机器人手让物体在不同接触之间转移。这里不预设行为成功，也不预设实验结果。</p>
+<table>
+<thead>
+<tr>
+<th>视角</th>
+<th>构图</th>
+<th>表达职责</th>
+<th>导出用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完整证据视角</td>
+<td>固定相机完整容纳手、物体、相关支撑和全部运动范围。交互发生前开始录制，结果出现后再结束。</td>
+<td>让读者检查发生了什么，避免关键动作被隐藏。</td>
+<td>连续的科学记录，说明播放速度和来源。</td>
+</tr>
+<tr>
+<td>机制视角</td>
+<td>在手／物体高度拍中近景；两个接触表面始终可见。</td>
+<td>解释图注所指出的接触变化或物体运动。</td>
+<td>页面上的解释，配套完整原始记录。</td>
+</tr>
+<tr>
+<td>入口镜头</td>
+<td>用较宽构图或克制的相机运动介绍物理设置，再呈现关键行为。</td>
+<td>建立任务信息与视觉兴趣。</td>
+<td>明确标为宣传用途的视频。</td>
+</tr>
+</tbody>
+</table>
+<p>先从固定视角重播轨迹。选裁切范围前，检查开头、最大运动幅度、关键接触和最终状态。近景若排除了物体落点或接收物体的接触，就无法证明转移结果。制作移动相机的宣传视频时，选择已有轨迹记录并保留其运动；相机运动不能让人对物体运动产生错误印象。</p>
+<p>不同职责使用不同图注。证据图注说明任务、条件、播放速度和可见结果。机制图注告诉读者看哪里，以及图示解释了哪种关系。宣传图注可以介绍能力，但任何性能论断都应指向支持它的证据。经过剪辑或精选的成功片段，仍然只是经过选择的素材。</p>
+<h3 id="visual-production-配方-2先让接触几何可读再添加效果">配方 2：先让接触几何可读，再添加效果</h3>
+<p>先在偏离相机的位置布置一盏柔和主光，让弯曲的手部连杆和物体显出清楚形状。检查关键接触处的一帧。如果轮廓融入背景，就添加克制的轮廓光。如果阴影遮住交互表面，就调整一盏更弱的补光。避免高光让接触区域过曝。</p>
+<p>仿真物体使用其已有几何与材质。想换成更好看的资产前，先调整背景或灯光：替换物体可能改变科学含义。透明或反光物体既要检查静帧，也要检查完整运动；漂亮的初始帧可能在物体旋转后变得难以辨认。</p>
+<p>一种有用的视觉比较，是对<strong>同一</strong>帧和同一条轨迹使用不同灯光渲染两次。选择最便于检查相关空间关系的版本。这是制作比较，不是算法消融。</p>
+<h3 id="visual-production-配方-3让图示承担三层阅读任务">配方 3：让图示承担三层阅读任务</h3>
+<p><a href="https://transformer-transformer.github.io/#robotokens">参考案例的表示章节</a>是学习位置。阅读本配方时，打开其原始图示：</p>
+<figure>
+  <img width="2880" height="1152" src="../../image/tt-tokenization.png" alt="Transformer Transformer 原始表示图，作为注明来源的学习材料保留" loading="lazy">
+  <figcaption>原始表示图，作为注明来源的学习材料保留。来源：<a href="https://transformer-transformer.github.io/#robotokens">Transformer Transformer · RoboTokens</a>。<a href="../../image/tt-tokenization.png">查看原尺寸</a>。下文是我们为实际制作归纳的建议。</figcaption>
+</figure>
+
+<p>制作自己的可编辑图示，并赋予它三个独立职责：</p>
+<ol>
+<li><strong>图示：</strong> 让读者一眼看见对象和关系。缩小到预定页面宽度后，整体流程与语义颜色分组仍应可识别。</li>
+<li><strong>图注：</strong> 解释如何读图，以及图示说明了什么。写明输入／输出关系，解释颜色、箭头或叠加标注。</li>
+<li><strong>正文：</strong> 解释机制及其必要限定。正式定义和技术依据放在这里，不要把它们挤进图片。</li>
+</ol>
+<p><strong>假设的手部迁移图布局。</strong> 左边放源演示，中间放交互表示，右边放目标手。保持物体的视觉尺度一致。用带标签的箭头区分“提取交互”和“生成机器人运动”；这些是规划中的标签，必须符合实际方法。只有作者提供了真实比较，才把它放在下方。不要画一个合成失败示例，再把它标为基线结果。</p>
+<p><strong>图注改编：</strong> “从左向右阅读：演示提供源运动，中间面板显示交互信息，右侧面板显示对应的机器人运动。叠加标注指出了［实际的量］。”交付前，将方括号替换为真实的量。这句话解释读图顺序；如果图示确立了某项发现，应另用一句话陈述经过验证的结论。</p>
+<p><strong>正文改编：</strong> 回答为什么中间信息必不可少，以及实现如何获得它。拟议管线的图示只说明组织方式，不能证明它优于另一种方法。用评估视觉材料支持后一种论断。</p>
+<h3 id="visual-production-配方-4复用从仿真到渲染的路径">配方 4：复用从仿真到渲染的路径</h3>
+<p>编写导入器前，先检查项目现有的查看器与导出器。原始<a href="https://umi-on-legs.github.io/#visualization-qa">可视化问答</a>链接了已有路径；应查阅其所链接的代码与环境要求，不要把某一个仿真器的流程当成通用方案。</p>
+<p>保持一个简短、明确的数据契约：机器人／物体资产标识、世界坐标变换、关节状态、时间戳，以及需要可视化的量。几何只导入一次，应用记录的运动，再在渲染器中制作材质、相机和灯光。物理计算仍使用已有仿真器。渲染应当重播原始行为，不应悄悄重新计算成另一个实验。</p>
+<p>渲染完整序列前，先用一个代表性帧和一段短运动，对照现有查看器进行验证。检查位姿、尺度、方向、接触时刻和播放时长。把可编辑场景或查看器配置与导出文件一起保留，让相机或标签修改无需重新构建实验。</p>
+<h3 id="visual-production-诚实检查实际输出">诚实检查实际输出</h3>
+<p>记录检查了什么、以多大尺寸检查，以及使用了哪个来源。一条有用的检查记录应当具体：“打开窄屏页面预览；图例可读，但转移过程中物体离开了近景。”这比“视觉质量检查通过”提供了更多信息。</p>
+<ul>
+<li><strong>含义：</strong> 读者能说出可见行为和被比较的条件吗？</li>
+<li><strong>证据：</strong> 构图是否保留了论断所需的事件？相关位置是否注明剪辑素材、播放速度、仿真和真实录制？</li>
+<li><strong>层次：</strong> 在交付尺寸下，主要关系是否仍可读？图注是在解释，还是重复正文？</li>
+<li><strong>时序：</strong> 内容出现时机是否与口述概念一致？网页读者能暂停并检查重要状态吗？</li>
+<li><strong>完整性：</strong> 渲染是否匹配原始轨迹？参考资产是否注明来源，并与项目自己的结果区分？</li>
+<li><strong>交付：</strong> 导出图片能加载、视频能播放吗？读者能从交付成果访问可编辑源文件与科学记录吗？</li>
+</ul>
+<p>修正实际观察到的问题，并重新检查受影响的部分。不要声称一次导出、一个源文件或一张漂亮静帧，就能证明已检查完整页面或视频。</p></article></section>
+<section class="chapter" id="media-sources"><p class="chapter-kicker">05 / 媒体与来源</p><article class="document"><p class="source-links"><a href="media-sources.md">中文 Markdown</a><a href="../../references/media-sources.md">英文原文 ↗</a></p><h2 id="media-sources-媒体来源与原始链接">媒体来源与原始链接</h2>
+<p><code>image/</code> 中的本地文件是注明来源的学习参考。它们用来说明技能中的设计决策，不是为用户项目进行的实验。采集日期：<strong>2026-10-09</strong>。项目页是多人合作的成果；这些截图不能证明某个人的设计作者身份。</p>
+<h3 id="media-sources-项目与讲座入口">项目与讲座入口</h3>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>应当检查什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://huy-ha.github.io/assets/presenting_your_research.pdf">Huy Ha 的讲座</a></td>
+<td>103 页原始讲座；技能中的引用采用从 1 开始计数的 PDF 页码。</td>
+</tr>
+<tr>
+<td><a href="https://huy-ha.github.io/">Huy Ha 的个人主页</a></td>
+<td>Updates 中的 2025 年 9 月条目链接了这份讲座。</td>
+</tr>
+<tr>
+<td><a href="https://shurans.github.io/">Shuran Song 的个人主页</a></td>
+<td>研究与项目链接，以及团队背景。</td>
+</tr>
+<tr>
+<td><a href="https://umi-on-legs.github.io/">UMI on Legs</a></td>
+<td>段落过渡、行为解释、硬件与问答。</td>
+</tr>
+<tr>
+<td><a href="https://transformer-transformer.github.io/">Transformer Transformer</a></td>
+<td>入口动画、整体流程、表示、机制与证据。</td>
+</tr>
+<tr>
+<td><a href="https://huy-ha.github.io/scalingup/">Scaling Up</a></td>
+<td>能力摘要，以及末尾问答中的策略轨迹解释。</td>
+</tr>
+<tr>
+<td><a href="https://umi-gripper.github.io/">Universal Manipulation Interface</a></td>
+<td>人类／机器人配对与任务比较。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="media-sources-截图与原始图示">截图与原始图示</h3>
+<p>截图保留页面在实际采集尺寸下的可见内容。截图由 JPEG 转为 PNG，没有改变内容；它们不是可编辑的重绘版本。采集宽度随浏览器实际窗口而变化。一些截图只是视口中的节选，并非完整章节；相邻内容应继续查看原始来源。</p>
+<table>
+<thead>
+<tr>
+<th>本地文件</th>
+<th>来源位置</th>
+<th>截图的学习用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../image/umi-question-chain.png">umi-question-chain.png</a></td>
+<td><a href="https://umi-on-legs.github.io/#task-tracking">进入跟踪问题的过渡</a></td>
+<td>在同一个真实视口中呈现问题与其后续答案。</td>
+</tr>
+<tr>
+<td><a href="../../image/umi-wbc.png">umi-wbc.png</a></td>
+<td><a href="https://umi-on-legs.github.io/#wbc">控制器</a></td>
+<td>稳定性演示蒙太奇及其解释段落。</td>
+</tr>
+<tr>
+<td><a href="../../image/umi-precision.png">umi-precision.png</a></td>
+<td><a href="https://umi-on-legs.github.io/#precise-tracking">精确性</a></td>
+<td>相邻的提前控制示例。</td>
+</tr>
+<tr>
+<td><a href="../../image/tt-hero.png">tt-hero.png</a></td>
+<td><a href="https://transformer-transformer.github.io/">入口</a></td>
+<td>机器人动画上方的标题层次。</td>
+</tr>
+<tr>
+<td><a href="../../image/tt-framework.png">tt-framework.png</a></td>
+<td><a href="https://transformer-transformer.github.io/#framework">框架</a></td>
+<td>三步概览及其图注。</td>
+</tr>
+<tr>
+<td><a href="../../image/tt-robotokens.png">tt-robotokens.png</a></td>
+<td><a href="https://transformer-transformer.github.io/#robotokens">表示</a></td>
+<td>图示层次与颜色解释。</td>
+</tr>
+<tr>
+<td><a href="../../image/tt-results.png">tt-results.png</a></td>
+<td><a href="https://transformer-transformer.github.io/#results">结果</a></td>
+<td>比较图表及独立的解释性图注。</td>
+</tr>
+<tr>
+<td><a href="../../image/tt-teaser.png">tt-teaser.png</a></td>
+<td><a href="https://transformer-transformer.github.io/static/images/teaser.png">原始图示</a></td>
+<td>下载的原始概览图；未修改。</td>
+</tr>
+<tr>
+<td><a href="../../image/tt-tokenization.png">tt-tokenization.png</a></td>
+<td><a href="https://transformer-transformer.github.io/static/images/tokenization.png">原始图示</a></td>
+<td>下载的原始表示图；未修改。</td>
+</tr>
+<tr>
+<td><a href="../../image/lecture-050.png">lecture-050.png</a></td>
+<td><a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=50">PDF 第 50 页</a></td>
+<td>解释顺序示例。</td>
+</tr>
+<tr>
+<td><a href="../../image/lecture-067.png">lecture-067.png</a></td>
+<td><a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=67">PDF 第 67 页</a></td>
+<td>口述脚本与动画强调的对应。</td>
+</tr>
+<tr>
+<td><a href="../../image/lecture-076.png">lecture-076.png</a></td>
+<td><a href="https://huy-ha.github.io/assets/presenting_your_research.pdf#page=76">PDF 第 76 页</a></td>
+<td>科学用途与宣传用途。</td>
+</tr>
+</tbody>
+</table>
+<p>三张讲座图片由原始 PDF 的本地兼容副本栅格化，尺寸为 1248 × 702。该副本保留幻灯片内容；为适配桌面 PDF 查看器，转换了其图像编码。本技能链接完整讲座，不在技能内重复存放整份 PDF。</p>
+<h3 id="media-sources-视频与封面帧">视频与封面帧</h3>
+<p>三个 MP4 文件都是项目页提供的原始文件，没有裁切、重新计时或重新编码。本页按原始文件的时间播放；原始素材中已有的剪辑或加速仍然保留。蒙太奇仍然是蒙太奇，不是未经剪辑的完整科学执行记录。</p>
+<table>
+<thead>
+<tr>
+<th>本地文件</th>
+<th>原始媒体 URL</th>
+<th>时长与阅读任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../image/umi-stability.mp4">umi-stability.mp4</a></td>
+<td><a href="https://umi-on-legs.github.io/static/videos/stable-tracking-small.mp4">原始文件</a></td>
+<td>12.713 秒；检查身体扰动与夹爪补偿。</td>
+</tr>
+<tr>
+<td><a href="../../image/umi-precision.mp4">umi-precision.mp4</a></td>
+<td><a href="https://umi-on-legs.github.io/static/videos/wbc-precision-small.mp4">原始文件</a></td>
+<td>18.167 秒；检查身体的提前响应与夹爪运动。</td>
+</tr>
+<tr>
+<td><a href="../../image/tt-hero.mp4">tt-hero.mp4</a></td>
+<td><a href="https://transformer-transformer.github.io/static/videos/looping_robotokens.mp4">原始文件</a></td>
+<td>15.167 秒；检查机器人身份、颜色、灯光与运动。</td>
+</tr>
+</tbody>
+</table>
+<p>封面图片 <code>umi-stability-poster.jpg</code>、<code>umi-precision-poster.jpg</code> 和 <code>tt-hero-poster.jpg</code> 分别从视频的 1 秒、2 秒与 2 秒处提取，并缩放为 960 像素宽。封面在播放前提供静帧，不会改变视频。</p>
+<h3 id="media-sources-制作工具入口">制作工具入口</h3>
+<ul>
+<li><a href="https://umi-on-legs.github.io/#visualization-qa">UMI on Legs 的渲染说明</a>：仿真器与渲染器的职责，以及所链接的导入工具。</li>
+<li><a href="https://github.com/real-stanford/scalingup/blob/master/docs/visualization.md">Scaling Up 的可视化说明</a>：原始渲染工作流。</li>
+<li><a href="https://github.com/huy-ha/pybullet-blender-recorder">PyBullet 到 Blender 的记录器／导入器</a>：记录连杆位姿并导入 Blender。</li>
+</ul>
+<p>让来源归属始终跟随参考材料。把代码或视觉资产复制到公开输出前，遵循相关来源的许可证。UMI on Legs 页脚说明了网站许可证与模板归属；这不意味着每个第三方材料或其他项目都拥有同一份通用许可证。学习其表达决策，再为实际项目创建自己的证据与可编辑视觉材料。</p></article></section>
+        <footer class="closing">
+          <p>这份手册服务于清楚、可信的科研表达。案例中的截图与视频来自所标注的原始项目；由案例归纳的制作建议会明确标为改编或解读。</p>
+          <a href="#top">回到顶部 ↑</a>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
