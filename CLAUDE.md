@@ -16,6 +16,10 @@
   - eg., Chat: "zhexi 你好！🚀" | Code comment: `# Initialize weights` | Git: `✨ feat: add user login`
 - Write code first, then comments. Only add concise, necessary English comments after all functions are implemented
 
+## Math formatting by interface
+
+In terminal replies, use Unicode math instead of raw LaTeX; format complex equations and matrices in aligned code blocks. In desktop/web chats with math rendering, use LaTeX. Identify the interface from explicit host context; if unknown, default to Unicode. This applies only to chat replies, not source files.
+
 ## Skills
 
 - For complex coding tasks, use `superpowers`
